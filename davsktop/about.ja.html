@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Davsktopについて</title>
+<link rel="stylesheet" type="text/css" href="about.css"/>
+</head>
+<body>
+<div align="right"><a href="about.html">en</a>/ja</div>
+<h1 align="center">Davsktopについて</h1>
+<div class="container">
+<h2 class="title-bar">使用許可</h2>
+Davsktopは<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">the Apache License, Version 2.0</a>のもとで使用許可されます。
+</div>
+<div class="container">
+<h2 class="title-bar">アイコン</h2>
+<h3 class="section">デスクトップ上</h3>
+<img align="left" src="rootfolder.png">ルートフォルダ<br/>ダブルクリックして開いてください。<br clear="left"/>
+<img align="left" src="newfolder.png">新規フォルダ<br/>新規フォルダを置きたいフォルダにドラッグ＆ドロップしてください。<br clear="left"/>
+<img align="left" src="newtext.png">新規テキストファイル<br/>新規テキストファイルを置きたいフォルダにドラッグ＆ドロップしてください。<br clear="left"/>
+<img align="left" src="trashbin.png">ゴミ箱<br/>不必要なファイルをドラッグ＆ドロップしてください。<br clear="left"/>
+<h3 class="section">On Window</h3>
+<img align="left" src="reload.png">クリックするとリロードします。<br clear="left"/>
+<img align="left" src="close.png">クリックするとウインドウを閉じます。<br clear="left"/>
+<img align="left" src="upload.png">クリックすると変更をアップロードします。<br clear="left"/>
+<img align="left" src="folder.png">フォルダです。ダブルクリックすると開きます。<br clear="left"/>
+<img align="left" src="text.png">テキストファイルです。ダブルクリックすると開きます。<br clear="left"/>
+<img align="left" src="unknown.png">不明なファイルです。<br clear="left"/>
+<img align="left" src="link.png">ファイルへのリンクです。<br clear="left"/>
+</div>
+<div class="container">
+<h2 class="title-bar">上手な使い方</h2>
+<ul>
+<li>ファイルを同じフォルダにドラッグ＆ドロップすることで名前を変更できます。移動先に既に同じ名前のファイルがあればDavsktopは新しい名前を要求します。
+<li>リンクアイコン(<img src="link.png"/>)は単なるハイパーリンクです。ファイルのダウンロードなど、ブラウザで通常できることは一通りできます。
+</ul>
+</div>
+<div class="container">
+<h2 class="title-bar">設定</h2>
+config.jsに以下の変数を書くことでDavsktopを設定することができます。
+<table border=1>
+<thead>
+<tr>
+<td>変数名</td>
+<td>用途</td>
+<td>デフォルト値</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BACKGROUND_IMAGE</td>
+<td>背景</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>MONTHS</td>
+<td>月の名前</td>
+<td>["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]</td>
+</tr>
+<tr>
+<td>TEXT_MIME_PATTERN</td>
+<td>mime typeでテキストファイルを認識するパターン</td>
+<td>/^text\//</td>
+</tr>
+<tr>
+<td>TEXT_PATH_PATTERN</td>
+<td>パスでテキストファイルを認識するパターン</td>
+<td>/\.txt$/</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="container">
+<h2 class="title-bar">既知の問題</h2>
+<ul>
+<li>ChromeとIE10上ではコピーできません。常に移動になります。
+</ul>
+</div>
+</body>
+</html>
+
