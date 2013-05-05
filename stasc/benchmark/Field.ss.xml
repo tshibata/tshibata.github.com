@@ -1,0 +1,8 @@
+<svg overflow="hidden" viewBox="0 0 640 360" viewPort="0 0 640 360" width="640" height="360"
+ xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<rect x="0" y="0" fill="darkkhaki" width="640" height="360"/>
+	<g>
+		<ss:bond name="Air"/>
+	</g>
+</svg>
+

@@ -1,0 +1,6 @@
+<circle visibility="visible" fill="red" stroke="black" r="5"
+ xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+<ss:attribute name="X" target="cx" order="0"/>
+<ss:attribute name="Y" target="cy" order="1"/>
+</circle>
+

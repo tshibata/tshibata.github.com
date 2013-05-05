@@ -1,0 +1,91 @@
+<html>
+<head>
+<script content="text/javascript" src="Stasc.js"></script>
+<script content="text/javascript">
+var base = Base();
+window.onload = function() {
+	document.getElementById("body").appendChild(base);
+	setTimeout(init_aerial, 1000);
+};
+var sky = Sky();
+var t0;
+var aerialCounter = 0;
+function init_aerial() {
+	base.Content = sky;
+	t0 = new Date();
+	setTimeout(aerial, 4);
+}
+function aerial(event) {
+	var d;
+	d = (1000 - aerialCounter) % 10 + 1;
+	if (d == 10) {
+		sky.Seed = aerialCounter;
+	}
+	sky.Opacity = 1 / d;
+	sky.Transform = "scale(" + (1 / d) + ")";
+	sky.X = -320 * d;
+	sky.Y = -180 * d;
+	sky.W = 640 * d;
+	sky.H = 360 * d;
+
+	d = (1005 - aerialCounter) % 10 + 1;
+	if (d == 10) {
+		sky.Seed2 = aerialCounter;
+	}
+	sky.Opacity2 = 1 / d;
+	sky.Transform2 = "scale(" + (1 / d) + ")";
+	sky.X2 = -320 * d;
+	sky.Y2 = -180 * d;
+	sky.W2 = 640 * d;
+	sky.H2 = 360 * d;
+
+	var t1 = new Date();
+	if (t1 - t0 < 10000) {
+		aerialCounter++;
+		setTimeout(aerial, 4);
+	} else {
+		setTimeout(init_barrage, 1000);
+	}
+}
+var barrageCounter = 0;
+var field = Field();
+var fires = {};
+function init_barrage() {
+	base.Content = field;
+	for (var i = 0; i < 500; i++) {
+		fires[i] = Fire(Math.random() * 640, Math.random() * 360);
+		fires[i].dx = Math.random(2) + 1;
+		fires[i].dy = Math.random(2) + 1;
+		field.Air.appendChild(fires[i]);
+	}
+	t0 = new Date();
+	setTimeout(barrage, 4);
+}
+function barrage(event) {
+	for (var i = 0; i < 500; i++) {
+		fires[i].X = Number(fires[i].X) + fires[i].dx;
+		if (640 < Number(fires[i].X)) {
+			fires[i].X -= 640;
+		}
+		fires[i].Y = Number(fires[i].Y) + fires[i].dy;
+		if (360 < Number(fires[i].Y)) {
+			fires[i].Y -= 360;
+		}
+	}
+
+	var t1 = new Date();
+	if (t1 - t0 < 10000) {
+		barrageCounter++;
+		setTimeout(barrage, 4);
+	} else {
+		base.Content = Report();
+		base.Content.Aerial = aerialCounter / 10 + "fps";
+		base.Content.Barrage = barrageCounter / 10 + "fps";
+		base.Content.Mean = Math.round(Math.sqrt(aerialCounter * barrageCounter)) / 10 + "fps";
+	}
+}
+</script>
+</head>
+<body id="body" bgcolor="black">
+</body>
+
