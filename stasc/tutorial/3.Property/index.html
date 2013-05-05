@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>3. Property</title>
+<script content="text/javascript" src="Stasc.js"></script>
+<script content="text/javascript" src="airhockey.js"></script>
+</head>
+<body>
+<div id="game" style="float:left;">
+</div>
+<div>
+<h1>3. Property</h1>
+Now you can see the score.
+The players must get seven points to win.
+In <a href="Score.ss.xml">Score.ss.xml</a>, there is a stasc property tag:<br/>
+&lt;ss:property name="Numbers" target="textContent" order="0"/&gt;<br/>
+This does almost the same as stasc attribute but stasc property referes dom object property instead of XML attribute.
+When order is specified, for example, "0" means the first parameter of the factory method.
+It is also the same as stasc attribute, although it was not used so far.
+So the scoring is done like:<br/>
+Score(got + " - " + lost);<br/>
+</div>
+<div>
+I'm afraid that you might be confused about difference between attribute and property.
+Their purposes are almost the same.
+Some of the properties are accessible as attributes.
+But some of the properties, e.g. textContent, can't be attributes.
+On the other hand, there are attributes not defined as properties.
+In case that both ways are possible, property may be better for performance.
+</div>
+<div>
+<a href="../2.Attribute/1.Math/">&lt;&lt;</a><a href="../4.Bond/">&gt;&gt;</a>
+</div>
+</body>
+</html>
+
