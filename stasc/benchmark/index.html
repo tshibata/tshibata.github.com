@@ -17,27 +17,27 @@ function init_aerial() {
 }
 function aerial(event) {
 	var d;
-	d = (1000 - aerialCounter) % 10 + 1;
-	if (d == 10) {
+	d = (100000 - aerialCounter) % 100 + 1;
+	if (d == 100) {
 		sky.Seed = aerialCounter;
 	}
-	sky.Opacity = 1 / d;
-	sky.Transform = "scale(" + (1 / d) + ")";
-	sky.X = -320 * d;
-	sky.Y = -180 * d;
-	sky.W = 640 * d;
-	sky.H = 360 * d;
+	sky.Opacity = 10 / d;
+	sky.Transform = "scale(" + (10 / d) + ")";
+	sky.X = -32 * d;
+	sky.Y = -18 * d;
+	sky.W = 64 * d;
+	sky.H = 36 * d;
 
-	d = (1005 - aerialCounter) % 10 + 1;
-	if (d == 10) {
+	d = (100050 - aerialCounter) % 100 + 1;
+	if (d == 100) {
 		sky.Seed2 = aerialCounter;
 	}
-	sky.Opacity2 = 1 / d;
-	sky.Transform2 = "scale(" + (1 / d) + ")";
-	sky.X2 = -320 * d;
-	sky.Y2 = -180 * d;
-	sky.W2 = 640 * d;
-	sky.H2 = 360 * d;
+	sky.Opacity2 = 10 / d;
+	sky.Transform2 = "scale(" + (10 / d) + ")";
+	sky.X2 = -32 * d;
+	sky.Y2 = -18 * d;
+	sky.W2 = 64 * d;
+	sky.H2 = 36 * d;
 
 	var t1 = new Date();
 	if (t1 - t0 < 10000) {

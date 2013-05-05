@@ -3,7 +3,7 @@ Base=function(){
 	var n0=document.createElement('div');
 	var n1=document.createElement('span');
 	n1.setAttribute('style','color:white;');
-	n1.appendChild(document.createTextNode('StascBench ver. 0.01'));
+	n1.appendChild(document.createTextNode('StascBench ver. 0.02'));
 	Object.defineProperty(n0,'Content',{
 		set:function(v){n0.replaceChild(v,n1);n1=v;},
 		get:function(){return n1;}
