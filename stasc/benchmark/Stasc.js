@@ -4,7 +4,7 @@ Base=function(){
 	n0.setAttribute('style','text-align:center;');
 	var n1=document.createElement('span');
 	n1.setAttribute('style','color:white;');
-	n1.appendChild(document.createTextNode('StascBench ver. 0.03'));
+	n1.appendChild(document.createTextNode('StascBench ver. 0.031'));
 	n0.appendChild(n1);
 	var n2=document.createElement('div');
 	var n3=document.createElement('span');
@@ -175,22 +175,6 @@ Sky=function(){
 	n11.setAttribute('y','-18000');
 	n11.setAttribute('width','64000');
 	n11.setAttribute('height','36000');
-	Object.defineProperty(n0, 'X',{
-		set:function(v){n11.setAttribute('x',v);},
-		get:function(){return n11.getAttribute('x');}
-	});
-	Object.defineProperty(n0, 'Y',{
-		set:function(v){n11.setAttribute('y',v);},
-		get:function(){return n11.getAttribute('y');}
-	});
-	Object.defineProperty(n0, 'W',{
-		set:function(v){n11.setAttribute('width',v);},
-		get:function(){return n11.getAttribute('width');}
-	});
-	Object.defineProperty(n0, 'H',{
-		set:function(v){n11.setAttribute('height',v);},
-		get:function(){return n11.getAttribute('height');}
-	});
 	n10.appendChild(n11);
 	n9.appendChild(n10);
 	var n12=document.createElementNS('http://www.w3.org/2000/svg','g');
@@ -206,26 +190,10 @@ Sky=function(){
 		get:function(){return n12.getAttribute('opacity');}
 	});
 	var n13=document.createElementNS('http://www.w3.org/2000/svg','rect');
-	n13.setAttribute('x','-16000');
-	n13.setAttribute('y','-9000');
-	n13.setAttribute('width','32000');
-	n13.setAttribute('height','18000');
-	Object.defineProperty(n0, 'X2',{
-		set:function(v){n13.setAttribute('x',v);},
-		get:function(){return n13.getAttribute('x');}
-	});
-	Object.defineProperty(n0, 'Y2',{
-		set:function(v){n13.setAttribute('y',v);},
-		get:function(){return n13.getAttribute('y');}
-	});
-	Object.defineProperty(n0, 'W2',{
-		set:function(v){n13.setAttribute('width',v);},
-		get:function(){return n13.getAttribute('width');}
-	});
-	Object.defineProperty(n0, 'H2',{
-		set:function(v){n13.setAttribute('height',v);},
-		get:function(){return n13.getAttribute('height');}
-	});
+	n13.setAttribute('x','-32000');
+	n13.setAttribute('y','-18000');
+	n13.setAttribute('width','64000');
+	n13.setAttribute('height','36000');
 	n12.appendChild(n13);
 	n9.appendChild(n12);
 	n0.appendChild(n9);

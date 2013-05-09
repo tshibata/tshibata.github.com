@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>StascBench</title>
 <script content="text/javascript" src="Stasc.js"></script>
 <script content="text/javascript">
 var base = Base();
@@ -23,10 +24,6 @@ function aerial(event) {
 	}
 	sky.Opacity = (100 - d) / 100; // well, this is not correct mathematically.
 	sky.Transform = "scale(" + (1 / d) + ")";
-	sky.X = -320 * d;
-	sky.Y = -180 * d;
-	sky.W = 640 * d;
-	sky.H = 360 * d;
 
 	d = (100049 - aerialCounter) % 100 + 1;
 	if (d == 100) {
@@ -34,10 +31,6 @@ function aerial(event) {
 	}
 	sky.Opacity2 = (100 - d) / 100; // well, this is not correct mathematically.
 	sky.Transform2 = "scale(" + (1 / d) + ")";
-	sky.X2 = -320 * d;
-	sky.Y2 = -180 * d;
-	sky.W2 = 640 * d;
-	sky.H2 = 360 * d;
 
 	var t1 = new Date();
 	if (t1 - t0 < 10000) {

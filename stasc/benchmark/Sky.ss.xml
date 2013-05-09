@@ -20,20 +20,12 @@
 			<ss:attribute name="Transform" target="transform"/>
 			<ss:attribute name="Opacity" target="opacity"/>
 			<rect x="-32000" y="-18000" width="64000" height="36000">
-				<ss:attribute name="X" target="x"/>
-				<ss:attribute name="Y" target="y"/>
-				<ss:attribute name="W" target="width"/>
-				<ss:attribute name="H" target="height"/>
 			</rect>
 		</g>
 		<g filter="url(#100)" transform="scale(0.02)" opacity="0.5">
 			<ss:attribute name="Transform2" target="transform"/>
 			<ss:attribute name="Opacity2" target="opacity"/>
-			<rect x="-16000" y="-9000" width="32000" height="18000">
-				<ss:attribute name="X2" target="x"/>
-				<ss:attribute name="Y2" target="y"/>
-				<ss:attribute name="W2" target="width"/>
-				<ss:attribute name="H2" target="height"/>
+			<rect x="-32000" y="-18000" width="64000" height="36000">
 			</rect>
 		</g>
 	</g>
