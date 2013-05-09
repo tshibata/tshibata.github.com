@@ -3,33 +3,33 @@
 	<rect x="0" y="0" fill="royalblue" width="640" height="360"/>
 	<defs>
 		<filter id="10">
-			<feTurbulence type="turbulence" baseFrequency="0.001" numOctaves="5" seed="10" stitchTiles="noStitch" result="t">
+			<feTurbulence type="turbulence" baseFrequency="0.0001" numOctaves="5" seed="10" stitchTiles="noStitch" result="t">
 				<ss:attribute name="Seed" target="seed"/>
 			</feTurbulence>
 			<feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
 		</filter>
 		<filter id="100">
-			<feTurbulence type="turbulence" baseFrequency="0.001" numOctaves="5" seed="100" stitchTiles="noStitch" result="t">
+			<feTurbulence type="turbulence" baseFrequency="0.0001" numOctaves="5" seed="100" stitchTiles="noStitch" result="t">
 				<ss:attribute name="Seed2" target="seed"/>
 			</feTurbulence>
 			<feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
 		</filter>
 	</defs>
 	<g transform="translate(320 180)">
-		<g filter="url(#10)" transform="scale(1)" opacity="1">
+		<g filter="url(#10)" transform="scale(0.01)" opacity="0">
 			<ss:attribute name="Transform" target="transform"/>
 			<ss:attribute name="Opacity" target="opacity"/>
-			<rect x="-320" y="-180" width="640" height="360">
+			<rect x="-32000" y="-18000" width="64000" height="36000">
 				<ss:attribute name="X" target="x"/>
 				<ss:attribute name="Y" target="y"/>
 				<ss:attribute name="W" target="width"/>
 				<ss:attribute name="H" target="height"/>
 			</rect>
 		</g>
-		<g filter="url(#100)" transform="scale(1)" opacity="1">
+		<g filter="url(#100)" transform="scale(0.02)" opacity="0.5">
 			<ss:attribute name="Transform2" target="transform"/>
 			<ss:attribute name="Opacity2" target="opacity"/>
-			<rect x="-320" y="-180" width="640" height="360">
+			<rect x="-16000" y="-9000" width="32000" height="18000">
 				<ss:attribute name="X2" target="x"/>
 				<ss:attribute name="Y2" target="y"/>
 				<ss:attribute name="W2" target="width"/>

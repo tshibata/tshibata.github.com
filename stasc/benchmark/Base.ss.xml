@@ -1,6 +1,9 @@
-<div xmlns:ss="http://tshibata.github.io/2013/stasc">
-	<ss:plug name="Content">
-		<span style="color:white;">StascBench ver. 0.02</span>
-	</ss:plug>
+<div style="text-align:center;" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<span style="color:white;">StascBench ver. 0.03</span>
+	<div>
+		<ss:plug name="Content">
+			<span></span>
+		</ss:plug>
+	</div>
 </div>
 

@@ -17,27 +17,27 @@ function init_aerial() {
 }
 function aerial(event) {
 	var d;
-	d = (100000 - aerialCounter) % 100 + 1;
+	d = (100099 - aerialCounter) % 100 + 1;
 	if (d == 100) {
 		sky.Seed = aerialCounter;
 	}
-	sky.Opacity = 10 / d;
-	sky.Transform = "scale(" + (10 / d) + ")";
-	sky.X = -32 * d;
-	sky.Y = -18 * d;
-	sky.W = 64 * d;
-	sky.H = 36 * d;
+	sky.Opacity = (100 - d) / 100; // well, this is not correct mathematically.
+	sky.Transform = "scale(" + (1 / d) + ")";
+	sky.X = -320 * d;
+	sky.Y = -180 * d;
+	sky.W = 640 * d;
+	sky.H = 360 * d;
 
-	d = (100050 - aerialCounter) % 100 + 1;
+	d = (100049 - aerialCounter) % 100 + 1;
 	if (d == 100) {
 		sky.Seed2 = aerialCounter;
 	}
-	sky.Opacity2 = 10 / d;
-	sky.Transform2 = "scale(" + (10 / d) + ")";
-	sky.X2 = -32 * d;
-	sky.Y2 = -18 * d;
-	sky.W2 = 64 * d;
-	sky.H2 = 36 * d;
+	sky.Opacity2 = (100 - d) / 100; // well, this is not correct mathematically.
+	sky.Transform2 = "scale(" + (1 / d) + ")";
+	sky.X2 = -320 * d;
+	sky.Y2 = -180 * d;
+	sky.W2 = 640 * d;
+	sky.H2 = 360 * d;
 
 	var t1 = new Date();
 	if (t1 - t0 < 10000) {
@@ -52,19 +52,21 @@ var field = Field();
 var fires = {};
 function init_barrage() {
 	base.Content = field;
-	for (var i = 0; i < 500; i++) {
-		fires[i] = Fire(Math.random() * 640, Math.random() * 360);
-		fires[i].dx = Math.random(2) + 1;
-		fires[i].dy = Math.random(2) + 1;
+	for (var i = 0; i < 100; i++) {
+		fires[i] = Fire(Math.random() * 640, Math.random() * 330);
+		fires[i].dx = Math.random() * 2 - 1;
+		fires[i].dy = Math.random() * 2 + 1;
 		field.Air.appendChild(fires[i]);
 	}
 	t0 = new Date();
 	setTimeout(barrage, 4);
 }
 function barrage(event) {
-	for (var i = 0; i < 500; i++) {
+	for (var i = 0; i < 100; i++) {
 		fires[i].X = Number(fires[i].X) + fires[i].dx;
-		if (640 < Number(fires[i].X)) {
+		if (Number(fires[i].X) < 0) {
+			fires[i].X += 640;
+		} else if (640 < Number(fires[i].X)) {
 			fires[i].X -= 640;
 		}
 		fires[i].Y = Number(fires[i].Y) + fires[i].dy;

@@ -1,8 +1,18 @@
-<table xmlns:ss="http://tshibata.github.io/2013/stasc">
+<table style="margin-left:auto; margin-right:auto;"
+ xmlns:ss="http://tshibata.github.io/2013/stasc">
 	<tbody style="color:white;">
-		<tr><td>Aerial</td><td><ss:property name="Aerial" target="textContent"/></td></tr>
-		<tr><td>Barrage</td><td><ss:property name="Barrage" target="textContent"/></td></tr>
-		<tr><td>Geometric Mean</td><td><ss:property name="Mean" target="textContent"/></td></tr>
+		<tr>
+			<td>Aerial (Zooming turbulence filters)</td>
+			<td><ss:property name="Aerial" target="textContent"/></td>
+		</tr>
+		<tr>
+			<td>Barrage (Moving filled circles)</td>
+			<td><ss:property name="Barrage" target="textContent"/></td>
+		</tr>
+		<tr>
+			<td>Geometric Mean</td>
+			<td><ss:property name="Mean" target="textContent"/></td>
+		</tr>
 	</tbody>
 </table>
 
