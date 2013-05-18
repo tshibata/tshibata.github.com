@@ -23,14 +23,14 @@ function aerial(event) {
 		sky.Seed = aerialCounter;
 	}
 	sky.Opacity = (100 - d) / 100; // well, this is not correct mathematically.
-	sky.Transform = "scale(" + (1 / d) + ")";
+	sky.Scale = 1 / d;
 
 	d = (100049 - aerialCounter) % 100 + 1;
 	if (d == 100) {
 		sky.Seed2 = aerialCounter;
 	}
 	sky.Opacity2 = (100 - d) / 100; // well, this is not correct mathematically.
-	sky.Transform2 = "scale(" + (1 / d) + ")";
+	sky.Scale2 = 1 / d;
 
 	var t1 = new Date();
 	if (t1 - t0 < 10000) {

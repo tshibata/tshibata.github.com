@@ -6,7 +6,7 @@
 			<td><ss:property name="Aerial" target="textContent"/></td>
 		</tr>
 		<tr>
-			<td>Barrage (Moving filled circles)</td>
+			<td>Barrage (Moving solid circles)</td>
 			<td><ss:property name="Barrage" target="textContent"/></td>
 		</tr>
 		<tr>

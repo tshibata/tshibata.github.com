@@ -16,14 +16,18 @@
 		</filter>
 	</defs>
 	<g transform="translate(320 180)">
-		<g filter="url(#10)" transform="scale(0.01)" opacity="0">
-			<ss:attribute name="Transform" target="transform"/>
+		<g filter="url(#10)" opacity="0">
+			<ss:attribute target="transform">
+				<ss:format>scale(<ss:item name="Scale">0.01</ss:item>)</ss:format>
+			</ss:attribute>
 			<ss:attribute name="Opacity" target="opacity"/>
 			<rect x="-32000" y="-18000" width="64000" height="36000">
 			</rect>
 		</g>
-		<g filter="url(#100)" transform="scale(0.02)" opacity="0.5">
-			<ss:attribute name="Transform2" target="transform"/>
+		<g filter="url(#100)" opacity="0.5">
+			<ss:attribute target="transform">
+				<ss:format>scale(<ss:item name="Scale2">0.02</ss:item>)</ss:format>
+			</ss:attribute>
 			<ss:attribute name="Opacity2" target="opacity"/>
 			<rect x="-32000" y="-18000" width="64000" height="36000">
 			</rect>
