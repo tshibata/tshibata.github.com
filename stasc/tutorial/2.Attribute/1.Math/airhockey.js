@@ -21,26 +21,26 @@ function reflection(x, y, dx, dy) {
 	var y2 = (y * y * y1 - x * x * y1 + y * x * x1 + y * x * x1) / (y * y + x * x);
 	return {x:x2 - x, y:y2 - y};
 }
+var WIDTH = 320;
+var HEIGHT = 480;
 var svg;
 var mouseX;
 window.onload = function() {
 	svg = Table();
 	document.getElementById("game").appendChild(svg);
-	mouseX = 160;
+	mouseX = WIDTH / 2;
 	svg.onmousemove = function(e) {
 		mouseX = e.pageX;
 	};
 	setTimeout(play, 1000);
 };
 function play() {
-	//svg.appendChild(puck);
 	svg.PuckVisibility = "visible";
 	var youX = mouseX, youDx = 0;
-	//you.X = mouseX;
-	var foeX = 160, foeDx = 0;
+	var foeX = WIDTH / 2, foeDx = 0;
 	var puckX, puckY;
-	svg.PuckX = puckX = 30 + Math.random() * 260;
-	svg.PuckY = puckY = 240;
+	svg.PuckX = puckX = WIDTH / 2 + (Math.random() - 0.5) * 130;
+	svg.PuckY = puckY = HEIGHT / 2;
 	var dx, dy;
 	dx = Math.random() * 10 - 5;
 	if (Math.random() < 0.5) {
@@ -53,8 +53,8 @@ function play() {
 		youDx = mouseX - youX;
 		if (youX + youDx < 30) {
 			youDx = 30 - youX;
-		} else if (290 < youX + youDx) {
-			youDx = 290 - youX;
+		} else if (WIDTH - 30 < youX + youDx) {
+			youDx = WIDTH - 30 - youX;
 		}
 		foeDx = puckX - foeX;
 		if (foeDx < -3) {
@@ -65,9 +65,9 @@ function play() {
 		var t, dt;
 		for (t = 1; 0 < t; t -= dt) {
 			var tLeft = dx < 0 ? (25 - puckX) / dx : Infinity;
-			var tRight = 0 < dx ? ((320 - 25) - puckX) / dx : Infinity;
+			var tRight = 0 < dx ? ((WIDTH - 25) - puckX) / dx : Infinity;
 			var tTop = dy < 0 ? (25 - puckY) / dy : Infinity;
-			var tBottom = 0 < dy ? ((480 - 25) - puckY) / dy : Infinity;
+			var tBottom = 0 < dy ? ((HEIGHT - 25) - puckY) / dy : Infinity;
 			var tYou = collision(puckX - youX, puckY - 400, dx - youDx, dy, 20 + 25);
 			var tFoe = collision(puckX - foeX, puckY - 80, dx - foeDx, dy, 20 + 25);
 			if (tLeft <= t && tLeft < tRight && tLeft < tTop && tLeft < tBottom && tLeft < tYou && tLeft < tFoe) {
