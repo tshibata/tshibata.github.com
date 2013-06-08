@@ -1,0 +1,16 @@
+<g xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<ss:attribute target="transform">
+		<ss:format>translate(<ss:item name="X" order="0">0</ss:item> <ss:item name="Y" order="1">0</ss:item>)</ss:format>
+	</ss:attribute>
+	<circle stroke="none" cx="0" cy="0" r="10" opacity="1">
+		<ss:attribute target="fill">
+			<ss:format>#F<ss:item name="Yellow" order="2">0</ss:item>0</ss:format>
+		</ss:attribute>
+		<ss:attribute name="R" target="r"/>
+		<ss:attribute name="Opacity" target="opacity"/>
+	</circle>
+	<text x="0" y="0" text-anchor="middle" font-size="12" font-family="Monospace" fill="white">
+		<ss:property name="Text" target="textContent"/>
+	</text>
+</g>
+

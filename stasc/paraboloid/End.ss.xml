@@ -1,0 +1,9 @@
+<g xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<text x="160" y="240" text-anchor="middle" font-size="28" font-family="Helvetica" fill="white">
+		Game Over
+	</text>
+	<text x="160" y="270" text-anchor="middle" font-size="14" font-family="Helvetica" fill="White" text-decoration="underline" style="cursor:pointer;" onclick="start();">
+		Replay
+	</text>
+</g>
+
