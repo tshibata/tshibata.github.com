@@ -52,16 +52,19 @@ window.onload = function() {
 		mouseX = e.pageX - touchOffset;
 		e.preventDefault();
 	});
+	stage = 0;
+	initStage();
 };
 function start() {
 	svg.Title = Clear();
 	svg.Score = score = 0;
 	stage = 0;
 	time = 12000;
-	svg.Time = "120.00sec";
-	startStage(30 + Math.random() * 260, 300, 0, - 2);
+	svg.Time = "120.00s";
+	initStage();
+	play(30 + Math.random() * 260, 300, 0, - 2);
 }
-function startStage(puckX, puckY, dx, dy) {
+function initStage() {
 	stage++;
 	svg.Stage = Stage("Stage " + stage);
 	blocks = [];
@@ -76,7 +79,6 @@ function startStage(puckX, puckY, dx, dy) {
 			svg.Stage.appendChild(o.element);
 		}
 	}
-	play(puckX, puckY, dx, dy);
 }
 function play(puckX, puckY, dx, dy) {
 	svg.PuckVisibility = "visible";
@@ -160,7 +162,8 @@ function play(puckX, puckY, dx, dy) {
 				dx = - dx;
 			} else if (tTop <= t && tTop < tBottom && tTop < tYou) {
 				clearInterval(iteration);
-				startStage(puckX, puckY + 350, dx, dy);
+				initStage();
+				play(puckX, puckY + 350, dx, dy);
 				return;
 			} else if (tBottom <= t && tBottom < tYou) {
 				power = Math.pow(2, stage - 1);
@@ -195,7 +198,11 @@ function play(puckX, puckY, dx, dy) {
 			svg.Title = End();
 			svg.PuckVisibility = "hidden";
 		}
-		svg.Time = Math.floor(time / 100) + "." + (Math.floor(time / 10) % 10) + (time % 10) + "sec";
+		svg.Time = (Math.floor(time / 10000) % 10).toString()
+			+ (Math.floor(time / 1000) % 10)
+			+ (Math.floor(time / 100) % 10)
+			+ "."
+			+ (Math.floor(time / 10) % 10) + (time % 10) + "s";
 	}, 30);
 };
 

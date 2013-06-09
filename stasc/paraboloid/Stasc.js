@@ -128,22 +128,20 @@ Screen=function(){
 		get:function(){return n3.getAttribute('cx');}
 	});
 	n0.appendChild(n3);
-	var n4=document.createElementNS('http://www.w3.org/2000/svg','g');
-	Object.defineProperty(n0,'Stage',{
-		set:function(v){n0.replaceChild(v,n4);n4=v;},
-		get:function(){return n4;}
-	});
+	var n4=document.createElementNS('http://www.w3.org/2000/svg','rect');
+	n4.setAttribute('x','0');
+	n4.setAttribute('y','430');
+	n4.setAttribute('fill','black');
+	n4.setAttribute('width','320');
+	n4.setAttribute('height','30');
 	n0.appendChild(n4);
 	var n5=document.createElementNS('http://www.w3.org/2000/svg','g');
-	var n6=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n6.setAttribute('x','160');
-	n6.setAttribute('y','240');
-	n6.setAttribute('text-anchor','middle');
-	n6.setAttribute('font-size','28');
-	n6.setAttribute('font-family','Helvetica');
-	n6.setAttribute('fill','white');
-	n6.appendChild(document.createTextNode('Paraboloid'));
-	n5.appendChild(n6);
+	Object.defineProperty(n0,'Stage',{
+		set:function(v){n0.replaceChild(v,n5);n5=v;},
+		get:function(){return n5;}
+	});
+	n0.appendChild(n5);
+	var n6=document.createElementNS('http://www.w3.org/2000/svg','g');
 	var n7=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n7.setAttribute('x','160');
 	n7.setAttribute('y','270');
@@ -155,61 +153,63 @@ Screen=function(){
 	n7.setAttribute('style','cursor:pointer;');
 	n7.setAttribute('onclick','start();');
 	n7.appendChild(document.createTextNode('Start'));
-	n5.appendChild(n7);
+	n6.appendChild(n7);
 	Object.defineProperty(n0,'Title',{
-		set:function(v){n0.replaceChild(v,n5);n5=v;},
-		get:function(){return n5;}
+		set:function(v){n0.replaceChild(v,n6);n6=v;},
+		get:function(){return n6;}
 	});
-	n0.appendChild(n5);
-	var n8=document.createElementNS('http://www.w3.org/2000/svg','rect');
-	n8.setAttribute('x','0');
-	n8.setAttribute('y','430');
-	n8.setAttribute('fill','black');
-	n8.setAttribute('width','320');
-	n8.setAttribute('height','30');
+	n0.appendChild(n6);
+	var n8=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n8.setAttribute('x','320');
+	n8.setAttribute('y','20');
+	n8.setAttribute('text-anchor','end');
+	n8.setAttribute('font-size','18');
+	n8.setAttribute('font-family','Monospace');
+	n8.setAttribute('fill','white');
+	Object.defineProperty(n0, 'Score',{
+		set:function(v){n8.textContent=v;},
+		get:function(){return n8.textContent;}
+	});
 	n0.appendChild(n8);
 	var n9=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n9.setAttribute('x','0');
-	n9.setAttribute('y','455');
+	n9.setAttribute('y','20');
 	n9.setAttribute('text-anchor','start');
-	n9.setAttribute('font-size','24');
+	n9.setAttribute('font-size','18');
 	n9.setAttribute('font-family','Monospace');
 	n9.setAttribute('fill','white');
-	Object.defineProperty(n0, 'Score',{
+	Object.defineProperty(n0, 'Time',{
 		set:function(v){n9.textContent=v;},
 		get:function(){return n9.textContent;}
 	});
 	n0.appendChild(n9);
-	var n10=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n10.setAttribute('x','320');
-	n10.setAttribute('y','455');
-	n10.setAttribute('text-anchor','end');
-	n10.setAttribute('font-size','24');
-	n10.setAttribute('font-family','Monospace');
-	n10.setAttribute('fill','white');
-	Object.defineProperty(n0, 'Time',{
-		set:function(v){n10.textContent=v;},
-		get:function(){return n10.textContent;}
-	});
-	n0.appendChild(n10);
 	return n0;
 };
 Stage=function(){
 	var n0=document.createElementNS('http://www.w3.org/2000/svg','g');
 	var n1=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n1.setAttribute('x','160');
-	n1.setAttribute('y','20');
-	n1.setAttribute('text-anchor','middle');
-	n1.setAttribute('font-size','18');
+	n1.setAttribute('x','0');
+	n1.setAttribute('y','450');
+	n1.setAttribute('text-anchor','start');
+	n1.setAttribute('font-size','24');
 	n1.setAttribute('font-family','Helvetica');
 	n1.setAttribute('fill','white');
+	n1.appendChild(document.createTextNode('Palaboloid'));
+	n0.appendChild(n1);
+	var n2=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n2.setAttribute('x','320');
+	n2.setAttribute('y','450');
+	n2.setAttribute('text-anchor','end');
+	n2.setAttribute('font-size','24');
+	n2.setAttribute('font-family','Helvetica');
+	n2.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Text',{
-		set:function(v){n1.textContent=v;},
-		get:function(){return n1.textContent;}
+		set:function(v){n2.textContent=v;},
+		get:function(){return n2.textContent;}
 	});
 	if(0<arguments.length){
 		n0.Text=arguments[0];
 	}
-	n0.appendChild(n1);
+	n0.appendChild(n2);
 	return n0;
 };
