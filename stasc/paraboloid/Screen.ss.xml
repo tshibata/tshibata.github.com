@@ -1,5 +1,8 @@
 <svg width="320" height="460" viewBox="0 0 320 460" viewPort="0 0 320 460" style="margin: 0; padding: 0;"
  xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<ss:attribute name="Width" target="width"/>
+	<ss:attribute name="Height" target="height"/>
+
 	<rect x="0" y="0" fill="black" width="320" height="460"/>
 
 	<circle visibility="hidden" fill="white" cx="160" cy="240" r="10">

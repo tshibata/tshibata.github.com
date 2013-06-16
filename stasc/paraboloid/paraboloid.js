@@ -24,6 +24,7 @@ function reflection(x, y, dx, dy) {
 var WIDTH = 320;
 var HEIGHT = 460;
 var BOTTOM = 30;
+var screenRate;
 var svg;
 var mouseX;
 var blocks;
@@ -32,6 +33,11 @@ var power;
 var score;
 var stage;
 function adjust() {
+	var xRate = (window.innerWidth || document.body.clientWidth) / WIDTH;
+	var yRate = (window.innerHeight || document.body.clientHeight) / HEIGHT;
+	screenRate = Math.min(xRate, yRate);
+	svg.Width = WIDTH * screenRate;
+	svg.Height = HEIGHT * screenRate;
 	window.scrollTo(0, 0);
 }
 window.onresize = adjust;
@@ -43,14 +49,14 @@ window.onload = function() {
 	adjust();
 	mouseX = WIDTH / 2;
 	svg.onmousemove = function(e) {
-		mouseX = e.pageX;
+		mouseX = e.pageX / screenRate;
 	};
 	var touchOffset;
 	svg.addEventListener("touchstart", function(e) {
-		touchOffset = e.pageX - mouseX;
+		touchOffset = e.pageX / screenRate - mouseX;
 	});
 	svg.addEventListener("touchmove", function(e) {
-		mouseX = e.pageX - touchOffset;
+		mouseX = e.pageX / screenRate - touchOffset;
 		e.preventDefault();
 	});
 	stage = 0;

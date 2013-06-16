@@ -92,6 +92,14 @@ Screen=function(){
 	n0.setAttribute('viewBox','0 0 320 460');
 	n0.setAttribute('viewPort','0 0 320 460');
 	n0.setAttribute('style','margin: 0; padding: 0;');
+	Object.defineProperty(n0, 'Width',{
+		set:function(v){n0.setAttribute('width',v);},
+		get:function(){return n0.getAttribute('width');}
+	});
+	Object.defineProperty(n0, 'Height',{
+		set:function(v){n0.setAttribute('height',v);},
+		get:function(){return n0.getAttribute('height');}
+	});
 	var n1=document.createElementNS('http://www.w3.org/2000/svg','rect');
 	n1.setAttribute('x','0');
 	n1.setAttribute('y','0');
