@@ -91,7 +91,15 @@ Screen=function(){
 	n0.setAttribute('height','460');
 	n0.setAttribute('viewBox','0 0 320 460');
 	n0.setAttribute('viewPort','0 0 320 460');
-	n0.setAttribute('style','margin: 0; padding: 0;');
+	n0.setAttribute('style','margin: 0; padding: 0; position:absolute;');
+	Object.defineProperty(n0, 'Left',{
+		set:function(v){n0.style.left=v;},
+		get:function(){return n0.style.left;}
+	});
+	Object.defineProperty(n0, 'Top',{
+		set:function(v){n0.style.top=v;},
+		get:function(){return n0.style.top;}
+	});
 	Object.defineProperty(n0, 'Width',{
 		set:function(v){n0.setAttribute('width',v);},
 		get:function(){return n0.getAttribute('width');}

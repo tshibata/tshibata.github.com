@@ -1,5 +1,7 @@
-<svg width="320" height="460" viewBox="0 0 320 460" viewPort="0 0 320 460" style="margin: 0; padding: 0;"
+<svg width="320" height="460" viewBox="0 0 320 460" viewPort="0 0 320 460" style="margin: 0; padding: 0; position:absolute;"
  xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<ss:property name="Left" target="style.left"/>
+	<ss:property name="Top" target="style.top"/>
 	<ss:attribute name="Width" target="width"/>
 	<ss:attribute name="Height" target="height"/>
 
