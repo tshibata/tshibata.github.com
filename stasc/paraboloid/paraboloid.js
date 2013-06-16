@@ -22,7 +22,8 @@ function reflection(x, y, dx, dy) {
 	return {x:x2 - x, y:y2 - y};
 }
 var WIDTH = 320;
-var HEIGHT = 430;
+var HEIGHT = 460;
+var BOTTOM = 30;
 var svg;
 var mouseX;
 var blocks;
@@ -108,8 +109,8 @@ function play(puckX, puckY, dx, dy) {
 			var tLeft = dx < 0 ? (10 - puckX) / dx : Infinity;
 			var tRight = 0 < dx ? ((WIDTH - 10) - puckX) / dx : Infinity;
 			var tTop = dy < 0 ? (- 10 - puckY) / dy : Infinity;
-			var tBottom = 0 < dy ? (HEIGHT - puckY) / dy : Infinity;
-			var tYou = collision(puckX - youX, puckY - HEIGHT, dx - youDx, dy, 10 + 50);
+			var tBottom = 0 < dy ? ((HEIGHT - BOTTOM) - puckY) / dy : Infinity;
+			var tYou = collision(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx, dy, 10 + 50);
 			if (tBlock <= t && tBlock < tLeft && tBlock < tRight && tBlock < tTop && tBlock < tBottom && tBlock < tYou) {
 				dt = tBlock;
 				puckX = puckX + dx * dt;
@@ -177,7 +178,7 @@ function play(puckX, puckY, dx, dy) {
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
 				youX = youX + youDx * dt;
-				var d = reflection(puckX - youX, puckY - HEIGHT, dx - youDx, dy);
+				var d = reflection(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx, dy);
 				dx = d.x + youDx;
 				dy = d.y;
 				// stop the mallet. don't let it go over the puck.
