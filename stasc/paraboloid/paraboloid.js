@@ -90,11 +90,20 @@ function initStage() {
 	svg.Stage = Stage("Stage " + stage);
 	blocks = [];
 	for (var y = 0; y < 6; y++) {
-		for (var x = 0; x < 13; x++) {
+		for (var x = 1; x < 15; x+=2) {
 			var o = {
-				"x":x * 24 + 16,
+				"x":x * 21 + 13,
 				"y":y * 24 + 40,
-				"element":Block(x * 24 + 16, y * 24 + 40, (y * 2).toString(16)),
+				"element":Block(x * 21 + 13, y * 24 + 40, (y * 2).toString(16)),
+			};
+			blocks.push(o);
+			svg.Stage.appendChild(o.element);
+		}
+		for (var x = 0; x < 15; x+=2) {
+			var o = {
+				"x":x * 21 + 13,
+				"y":y * 24 + 52,
+				"element":Block(x * 21 + 13, y * 24 + 52, (y * 2 + 1).toString(16)),
 			};
 			blocks.push(o);
 			svg.Stage.appendChild(o.element);
