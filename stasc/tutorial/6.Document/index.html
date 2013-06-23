@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>6. Document</title>
+</head>
+<body>
+<div>
+<h1>6. Document</h1>
+<div>
+In <a href="https://github.com/tshibata/stasc">the stasc repository</a>, there are two scripts to help documentation.
+</div>
+<div>
+<h2>Sxout.js</h2>
+Sxout.js reads JSON object in the last comment before the script and insert it as a stasc graft just before the scrept.
+"nodeType" is taken as name of factory function to create the dom object.
+Other properties are passed to the dom object unless the value is an array.
+Elements of array are added to the property by using addChildElement().
+</div>
+<div>
+You can use Sxout.js in document for end users like <a href="HowToPlay.html" target="_blank">HowToPlay.html</a>.
+It is convenient also when you need to check how it looks without running your code, which takes time in some cases such as screen shown when the game is over.
+</div>
+<div>
+<h2>Sxin.js</h2>
+Sxin.js reads JSON object in the same way as Sxout.js and present the tree as nested boxes.
+</div>
+<div>
+Sxout.js and Sxin.js can share JSON object.
+Such a pair illustrates one possible usage of your graft factory function.
+You can explain your design by listing suggestive cases like <a href="ViewRecipes.html" target="_blank">ViewRecipes.html</a>.
+</div>
+<div>
+<a href="../5.Plug/index.html">&lt;&lt;</a>
+</div>
+</body>
+</html>
+
