@@ -1,6 +1,6 @@
 <g xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
 	<text x="0" y="450" text-anchor="start" font-size="24" font-family="Helvetica" fill="white">
-		Palaboloid
+		Paraboloid
 	</text>
 	<text x="320" y="450" text-anchor="end" font-size="24" font-family="Helvetica" fill="white">
 		<ss:property name="Text" order="0" target="textContent"/>
