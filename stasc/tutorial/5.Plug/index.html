@@ -14,8 +14,9 @@ If you need to change, you have to use stasc plug like <a href="Table.ss.xml">Ta
 </div>
 <div>
 Inside the stasc plug tag, there must be only one element tree.
-And the element tree must not have any stasc tag in it because it will be replaced.
-The element tree is just provisional.
+The element tree is another graft and stasc tags inside belong to it.
+For example, a stasc tag Z in a stasc plug Y which belongs to graft X is referred as X.Y.Z.
+Z can't belong directly to X because it is gone with Y when Y is replaced.
 </div>
 <div>
 In case of this air hockey game, title of the game is shown until you click "Start" below the title. Then click() in <a href="airhockey.js">airhockey.js</a> is called and the title is replaced with <a href="Clear.ss.xml">Clear.ss.xml</a>, which shows actually nothing as overlay. It shows <a href="Score.ss.xml">Score.ss.xml</a> when the puck is in a goal. When the game is over, it shows <a href="End.ss.xml">End.ss.xml</a>. You can play again by clicking "Replay".
