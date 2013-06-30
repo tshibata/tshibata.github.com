@@ -34,6 +34,8 @@ var time;
 var power;
 var score;
 var stage;
+var alltimeBest;
+var todaysBest;
 function adjust() {
 	var width = window.innerWidth || document.body.clientWidth;
 	var height = window.innerHeight || document.body.clientHeight;
@@ -57,8 +59,27 @@ function adjust() {
 window.onresize = adjust;
 window.onorientationchange = adjust;
 window.onload = function() {
+	var now = new Date();
+	var today = now.getFullYear() * 10000 + now.getMonth() + 100 + now.getDate();
+	alltimeBest = 0;
+	todaysBest = 0;
+	var entries = document.cookie.split(";");
+	for (var i = 0; i < entries.length; i++) {
+		try {
+			var entry = entries[i].split("=");
+			var key = entry[0].replace(/(^\s+)|(\s+$)/g, "");
+			if (key == "alltime") {
+				alltimeBest = parseInt(entry[1]);
+			} else if (key == today) {
+				todaysBest = parseInt(entry[1]);
+			}
+		} catch (e) {
+		}
+	}
 	blocks = [];
 	svg = Screen();
+	svg.Title.AlltimeBest = alltimeBest;
+	svg.Title.TodaysBest = todaysBest;
 	document.getElementById("game").appendChild(svg);
 	adjust();
 	mouseX = WIDTH / 2;
@@ -86,24 +107,38 @@ function start() {
 	play(30 + Math.random() * 260, 300, 0, - 2);
 }
 function initStage() {
+	var types = [
+		{"color": Red, "calc": function(x){return x;}},
+		{"color": Orange, "calc": function(x){return x + 1;}},
+		{"color": Yellow, "calc": function(x){return x * 2;}}];
+	var layouts = [
+		[],
+		[1, 1, 0, 0, 0, 0],
+		[2, 1, 1, 0, 0, 0],
+		[2, 2, 1, 1, 0, 0],
+		[2, 2, 2, 1, 1, 0],
+		[2, 2, 2, 2, 1, 1]];
 	stage++;
 	svg.Stage = Stage("Stage " + stage);
 	blocks = [];
 	for (var y = 0; y < 6; y++) {
+		var type = types[layouts[Math.min(stage, layouts.length - 1)][y]];
 		for (var x = 1; x < 15; x+=2) {
 			var o = {
-				"x":x * 21 + 13,
-				"y":y * 24 + 40,
-				"element":Block(x * 21 + 13, y * 24 + 40, (y * 2).toString(16)),
+				"x": x * 21 + 13,
+				"y": y * 24 + 40,
+				"calc": type.calc,
+				"element": type.color(x * 21 + 13, y * 24 + 40),
 			};
 			blocks.push(o);
 			svg.Stage.appendChild(o.element);
 		}
 		for (var x = 0; x < 15; x+=2) {
 			var o = {
-				"x":x * 21 + 13,
-				"y":y * 24 + 52,
-				"element":Block(x * 21 + 13, y * 24 + 52, (y * 2 + 1).toString(16)),
+				"x": x * 21 + 13,
+				"y": y * 24 + 52,
+				"calc": type.calc,
+				"element": type.color(x * 21 + 13, y * 24 + 52),
 			};
 			blocks.push(o);
 			svg.Stage.appendChild(o.element);
@@ -157,6 +192,9 @@ function play(puckX, puckY, dx, dy) {
 					dy = dy / 2;
 				}
 
+				power = blocks[blockIndex].calc(power);
+				svg.Score = score = score + power;
+
 				(function() {
 					var element = blocks[blockIndex].element;
 					element.R = 25;
@@ -175,9 +213,6 @@ function play(puckX, puckY, dx, dy) {
 					}, 30);
 				})();
 				blocks.splice(blockIndex, 1);
-
-				svg.Score = score = score + power;
-				power *= 2;
 			} else if (tLeft <= t && tLeft < tRight && tLeft < tTop && tLeft < tBottom && tLeft < tYou) {
 				dt = tLeft;
 				puckX = puckX + dx * dt;
@@ -196,13 +231,13 @@ function play(puckX, puckY, dx, dy) {
 				play(puckX, puckY + 350, dx, dy);
 				return;
 			} else if (tBottom <= t && tBottom < tYou) {
-				power = Math.pow(2, stage - 1);
+				power = 1;
 				clearInterval(iteration);
 				svg.PuckVisibility = "hidden";
 				play(30 + Math.random() * 260, 300, 0, - 2);
 				return;
 			} else if (tYou <= t) {
-				power = Math.pow(2, stage - 1);
+				power = 1;
 				dt = tYou;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
@@ -224,8 +259,20 @@ function play(puckX, puckY, dx, dy) {
 		svg.YouX = youX;
 		time -= 3;
 		if (time <= 0) {
+			if (alltimeBest < score) {
+				alltimeBest = score;
+				document.cookie = "alltime=" + score + ";max-age=" + (60 * 60 * 24 * 365 * 100) + ";";
+			}
+			if (todaysBest < score) {
+				todaysBest = score;
+				var now = new Date();
+				var today = now.getFullYear() * 10000 + now.getMonth() + 100 + now.getDate();
+				document.cookie = today + "=" + score + ";max-age=" + (60 * 60 * 24) + ";";
+			}
 			clearInterval(iteration);
 			svg.Title = End();
+			svg.Title.AlltimeBest = alltimeBest;
+			svg.Title.TodaysBest = todaysBest;
 			svg.PuckVisibility = "hidden";
 		}
 		svg.Time = (Math.floor(time / 10000) % 10).toString()
