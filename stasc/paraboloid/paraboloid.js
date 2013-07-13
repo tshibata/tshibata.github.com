@@ -88,10 +88,10 @@ window.onload = function() {
 	};
 	var touchOffset;
 	svg.addEventListener("touchstart", function(e) {
-		touchOffset = (e.pageX - screenLeft) / screenRate - mouseX;
+		touchOffset = (e.targetTouches[0].pageX - screenLeft) / screenRate - mouseX;
 	});
 	svg.addEventListener("touchmove", function(e) {
-		mouseX = (e.pageX - screenLeft) / screenRate - touchOffset;
+		mouseX = (e.targetTouches[0].pageX - screenLeft) / screenRate - touchOffset;
 		e.preventDefault();
 	});
 	stage = 0;
