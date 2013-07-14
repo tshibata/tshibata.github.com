@@ -151,8 +151,12 @@ function play(puckX, puckY, dx, dy) {
 	svg.PuckX = puckX;
 	svg.PuckY = puckY;
 	var iteration;
+	var last = Date.now();
 	iteration = setInterval(function() {
-		dy += 0.02;
+		var current = Date.now();
+		var delay = (current - last) / 30;
+		last = current;
+		dy += 0.02 * delay;
 		youDx = mouseX - youX;
 		if (youX + youDx < 5) {
 			youDx = 5 - youX;
@@ -160,7 +164,7 @@ function play(puckX, puckY, dx, dy) {
 			youDx = 315 - youX;
 		}
 		var t, dt;
-		for (t = 1; 0 < t; t -= dt) {
+		for (t = delay; 0 < t; t -= dt) {
 			var tBlock = Infinity;
 			var blockIndex;
 			for (var i = 0; i < blocks.length; i++) {
@@ -174,13 +178,13 @@ function play(puckX, puckY, dx, dy) {
 			var tRight = 0 < dx ? ((WIDTH - 10) - puckX) / dx : Infinity;
 			var tTop = dy < 0 ? (- 10 - puckY) / dy : Infinity;
 			var tBottom = 0 < dy ? ((HEIGHT - BOTTOM) + 10 - puckY) / dy : Infinity;
-			var tYou = collision(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx, dy, 10 + 50);
+			var tYou = collision(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx / delay, dy, 10 + 50);
 			if (tBlock <= t && tBlock < tLeft && tBlock < tRight && tBlock < tTop && tBlock < tBottom && tBlock < tYou) {
 				dt = tBlock;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
-				youX = youX + youDx * dt;
-				if (dx * dx + dy * dy < 100) {
+				youX = youX + youDx * dt / delay;
+				if (dx * dx + dy * dy < 10 * delay) {
 					// fast
 					var d = reflection(puckX - blocks[blockIndex].x, puckY - blocks[blockIndex].y, dx, dy);
 					dx = d.x;
@@ -217,13 +221,13 @@ function play(puckX, puckY, dx, dy) {
 				dt = tLeft;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
-				youX = youX + youDx * dt;
+				youX = youX + youDx * dt / delay;
 				dx = - dx;
 			} else if (tRight <= t && tRight < tTop && tRight < tBottom && tRight < tYou) {
 				dt = tRight;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
-				youX = youX + youDx * dt;
+				youX = youX + youDx * dt / delay;
 				dx = - dx;
 			} else if (tTop <= t && tTop < tBottom && tTop < tYou) {
 				clearInterval(iteration);
@@ -241,9 +245,9 @@ function play(puckX, puckY, dx, dy) {
 				dt = tYou;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
-				youX = youX + youDx * dt;
-				var d = reflection(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx, dy);
-				dx = d.x + youDx;
+				youX = youX + youDx * dt / delay;
+				var d = reflection(puckX - youX, puckY - (HEIGHT - BOTTOM), dx - youDx / delay, dy);
+				dx = d.x + youDx / delay;
 				dy = d.y;
 				// stop the mallet. don't let it go over the puck.
 				youDx = 0;
@@ -251,14 +255,15 @@ function play(puckX, puckY, dx, dy) {
 				dt = t;
 				puckX = puckX + dx * dt;
 				puckY = puckY + dy * dt;
-				youX = youX + youDx * dt;
+				youX = youX + youDx * dt / delay;
 			}
 		}
 		svg.PuckX = puckX;
 		svg.PuckY = puckY;
 		svg.YouX = youX;
-		time -= 3;
+		time -= 3 * delay;
 		if (time <= 0) {
+			time = 0;
 			if (alltimeBest < score) {
 				alltimeBest = score;
 				document.cookie = "alltime=" + score + ";max-age=" + (60 * 60 * 24 * 365 * 100) + ";";
@@ -279,7 +284,7 @@ function play(puckX, puckY, dx, dy) {
 			+ (Math.floor(time / 1000) % 10)
 			+ (Math.floor(time / 100) % 10)
 			+ "."
-			+ (Math.floor(time / 10) % 10) + (time % 10) + "s";
+			+ (Math.floor(time / 10) % 10) + Math.floor(time % 10) + "s";
 	}, 30);
 };
 
