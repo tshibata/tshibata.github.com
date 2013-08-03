@@ -50,6 +50,7 @@ function adjust() {
 		screenLeft = (width - WIDTH * screenRate) / 2;
 		screenTop = 0;
 	}
+	svg.Position = "absolute";
 	svg.Left = screenLeft + "px";
 	svg.Top = screenTop + "px";
 	svg.Width = WIDTH * screenRate;
