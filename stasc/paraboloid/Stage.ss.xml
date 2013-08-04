@@ -5,5 +5,8 @@
 	<text x="320" y="450" text-anchor="end" font-size="24" font-family="Helvetica" fill="white">
 		<ss:property name="Text" order="0" target="textContent"/>
 	</text>
+	<g>
+		<ss:bond name="Field"/>
+	</g>
 </g>
 

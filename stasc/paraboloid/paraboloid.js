@@ -132,7 +132,7 @@ function initStage() {
 				"element": type.color(x * 21 + 13, y * 24 + 40),
 			};
 			blocks.push(o);
-			svg.Stage.appendChild(o.element);
+			svg.Stage.Field.appendChild(o.element);
 		}
 		for (var x = 0; x < 15; x+=2) {
 			var o = {
@@ -142,7 +142,7 @@ function initStage() {
 				"element": type.color(x * 21 + 13, y * 24 + 52),
 			};
 			blocks.push(o);
-			svg.Stage.appendChild(o.element);
+			svg.Stage.Field.appendChild(o.element);
 		}
 	}
 }
@@ -212,7 +212,7 @@ function play(puckX, puckY, dx, dy) {
 							element.R = 10 + i;
 							element.Opacity = 1 - i / 16;
 						} else {
-							svg.Stage.removeChild(element);
+							svg.Stage.Field.removeChild(element);
 							clearInterval(kaboom);
 						}
 					}, 30);
