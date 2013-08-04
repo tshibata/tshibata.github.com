@@ -90,6 +90,7 @@ End=function(){
 	n7.setAttribute('font-size','14');
 	n7.setAttribute('font-family','Helvetica');
 	n7.setAttribute('fill','white');
+	n7.setAttribute('text-decoration','underline');
 	var n8=document.createElementNS('http://www.w3.org/2000/svg','a');
 	n8.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
 	n8.appendChild(document.createTextNode('Help'));
@@ -385,6 +386,7 @@ Screen=function(){
 	n15.setAttribute('font-size','14');
 	n15.setAttribute('font-family','Helvetica');
 	n15.setAttribute('fill','white');
+	n15.setAttribute('text-decoration','underline');
 	var n16=document.createElementNS('http://www.w3.org/2000/svg','a');
 	n16.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
 	n16.appendChild(document.createTextNode('Help'));
