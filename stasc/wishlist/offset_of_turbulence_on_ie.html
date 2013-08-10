@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>clouds</title>
+  </head>
+  <body id="body">
+These four pictures are supposed to look the same.
+    <div style="margin:10px;">
+      <svg overflow="hidden" viewBox="0 0 640 180" viewPort="0 0 640 180" width="640" height="180">
+        <rect x="0" y="0" fill="royalblue" width="640" height="180"/>
+        <defs>
+          <filter id="clouds1">
+            <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="5" seed="10" stitchTiles="noStitch" result="t"/>
+            <feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
+		  </filter>
+        </defs>
+        <g filter="url(#clouds1)">
+          <rect x="0" y="0" width="640" height="180"/>
+        </g>
+      </svg>
+    </div>
+    <div style="margin:10px;">
+      <svg overflow="hidden" viewBox="0 0 640 180" viewPort="0 0 640 180" width="640" height="180">
+        <rect x="0" y="0" fill="royalblue" width="640" height="180"/>
+        <defs>
+          <filter id="clouds2">
+            <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="5" seed="10" stitchTiles="noStitch" result="t"/>
+            <feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
+		  </filter>
+        </defs>
+        <g filter="url(#clouds2)">
+          <rect x="0" y="0" width="640" height="180"/>
+          <rect x="-100" y="0" width="10" height="10"/>
+        </g>
+      </svg>
+    </div>
+
+    <div style="margin:10px;">
+      <svg overflow="hidden" viewBox="0 0 640 180" viewPort="0 0 640 180" width="640" height="180">
+        <rect x="0" y="0" fill="royalblue" width="640" height="180"/>
+        <defs>
+          <filter id="clouds3">
+            <feTurbulence type="turbulence" baseFrequency="0.001" numOctaves="5" seed="10" stitchTiles="noStitch" result="t"/>
+            <feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
+		  </filter>
+        </defs>
+        <g filter="url(#clouds3)" transform="scale(0.1)">
+          <rect x="0" y="0" width="6400" height="1800"/>
+        </g>
+      </svg>
+    </div>
+    <div style="margin:10px;">
+      <svg overflow="hidden" viewBox="0 0 640 180" viewPort="0 0 640 180" width="640" height="180">
+        <rect x="0" y="0" fill="royalblue" width="640" height="180"/>
+        <defs>
+          <filter id="clouds4">
+            <feTurbulence type="turbulence" baseFrequency="0.001" numOctaves="5" seed="10" stitchTiles="noStitch" result="t"/>
+            <feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
+		  </filter>
+        </defs>
+        <g filter="url(#clouds4)" transform="scale(0.1)">
+          <rect x="0" y="0" width="6400" height="1800"/>
+          <rect x="-1000" y="0" width="10" height="10"/>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
+
