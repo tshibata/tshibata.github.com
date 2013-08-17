@@ -2,13 +2,13 @@
  xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
 	<rect x="0" y="0" fill="royalblue" width="640" height="360"/>
 	<defs>
-		<filter id="10">
+		<filter id="cloud1">
 			<feTurbulence type="turbulence" baseFrequency="0.0001" numOctaves="5" seed="10" stitchTiles="noStitch" result="t">
 				<ss:attribute name="Seed" target="seed"/>
 			</feTurbulence>
 			<feColorMatrix in="t" values="0,0,0,0,1, 0,0,0,0,1, 0,0,0,0,1, 0,0,0,2,-1" result="m"/>
 		</filter>
-		<filter id="100">
+		<filter id="cloud2">
 			<feTurbulence type="turbulence" baseFrequency="0.0001" numOctaves="5" seed="100" stitchTiles="noStitch" result="t">
 				<ss:attribute name="Seed2" target="seed"/>
 			</feTurbulence>
@@ -16,7 +16,7 @@
 		</filter>
 	</defs>
 	<g transform="translate(320 180)">
-		<g filter="url(#10)" opacity="0">
+		<g filter="url(#cloud1)" opacity="0">
 			<ss:attribute target="transform">
 				<ss:format>scale(<ss:item name="Scale">0.01</ss:item>)</ss:format>
 			</ss:attribute>
@@ -24,7 +24,7 @@
 			<rect x="-32000" y="-18000" width="64000" height="36000">
 			</rect>
 		</g>
-		<g filter="url(#100)" opacity="0.5">
+		<g filter="url(#cloud2)" opacity="0.5">
 			<ss:attribute target="transform">
 				<ss:format>scale(<ss:item name="Scale2">0.02</ss:item>)</ss:format>
 			</ss:attribute>
