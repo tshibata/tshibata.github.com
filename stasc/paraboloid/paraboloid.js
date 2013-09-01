@@ -81,7 +81,7 @@ window.onload = function() {
 	svg = Screen();
 	svg.Title.AlltimeBest = alltimeBest;
 	svg.Title.TodaysBest = todaysBest;
-	document.getElementById("game").appendChild(svg);
+	document.body.appendChild(svg);
 	adjust();
 	mouseX = WIDTH / 2;
 	svg.onmousemove = function(e) {
