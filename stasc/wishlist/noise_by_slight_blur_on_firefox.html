@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:xlink="http://www.w3.org/1999/xlink">
+	<head>
+		<title>WHITEOUT</title>
+	</head>
+	<body>
+		<svg width="400" height="200">
+			<defs>
+				<filter id="blur" x="0" y="0">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="0.01"/>
+				</filter>
+			</defs>
+			<rect x="0" y="0" fill="black" width="200" height="200"/>
+			<rect x="10" y="10" fill="white" width="180" height="180"/>
+			<g filter="url(#blur)">
+				<text x="100" y="100" text-anchor="middle" font-size="32" font-family="Helvetica" fill="white">
+					WHITEOUT
+				</text>
+			</g>
+		</svg>
+	</body>
+</html>
+
