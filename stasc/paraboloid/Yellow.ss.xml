@@ -2,14 +2,12 @@
 	<ss:attribute target="transform">
 		<ss:format>translate(<ss:item name="X" order="0">0</ss:item> <ss:item name="Y" order="1">0</ss:item>)</ss:format>
 	</ss:attribute>
-	<g>
-		<ss:attribute name="Opacity" target="opacity"/>
-		<circle fill="#FFFF00" stroke="none" cx="0" cy="0" r="10" opacity="1">
-			<ss:attribute name="R" target="r"/>
-		</circle>
-		<line x1="-5" y1="-5" x2="5" y2="5" stroke="black" stroke-width="4"/>
-		<line x1="5" y1="-5" x2="-5" y2="5" stroke="black" stroke-width="4"/>
-	</g>
+	<ss:attribute name="Opacity" target="opacity"/>
+	<circle fill="#FFFF00" stroke="none" cx="0" cy="0" r="10" opacity="1">
+		<ss:attribute name="R" target="r"/>
+	</circle>
+	<line x1="-5" y1="-5" x2="5" y2="5" stroke="black" stroke-width="4"/>
+	<line x1="5" y1="-5" x2="-5" y2="5" stroke="black" stroke-width="4"/>
 	<text x="0" y="0" text-anchor="middle" font-size="12" font-family="Monospace" fill="white">
 		<ss:property name="Text" target="textContent"/>
 	</text>

@@ -117,52 +117,50 @@ Orange=function(){
 		get:function(){return mY;}
 	});
 	n0.setAttribute('transform','translate('+mX+' '+mY+')');
-	var n1=document.createElementNS('http://www.w3.org/2000/svg','g');
 	Object.defineProperty(n0, 'Opacity',{
-		set:function(v){n1.setAttribute('opacity',v);},
-		get:function(){return n1.getAttribute('opacity');}
+		set:function(v){n0.setAttribute('opacity',v);},
+		get:function(){return n0.getAttribute('opacity');}
 	});
-	var n2=document.createElementNS('http://www.w3.org/2000/svg','circle');
-	n2.setAttribute('fill','#FF7F00');
-	n2.setAttribute('stroke','none');
-	n2.setAttribute('cx','0');
-	n2.setAttribute('cy','0');
-	n2.setAttribute('r','10');
-	n2.setAttribute('opacity','1');
+	var n1=document.createElementNS('http://www.w3.org/2000/svg','circle');
+	n1.setAttribute('fill','#FF7F00');
+	n1.setAttribute('stroke','none');
+	n1.setAttribute('cx','0');
+	n1.setAttribute('cy','0');
+	n1.setAttribute('r','10');
+	n1.setAttribute('opacity','1');
 	Object.defineProperty(n0, 'R',{
-		set:function(v){n2.setAttribute('r',v);},
-		get:function(){return n2.getAttribute('r');}
+		set:function(v){n1.setAttribute('r',v);},
+		get:function(){return n1.getAttribute('r');}
 	});
-	n1.appendChild(n2);
+	n0.appendChild(n1);
+	var n2=document.createElementNS('http://www.w3.org/2000/svg','line');
+	n2.setAttribute('x1','0');
+	n2.setAttribute('y1','-7');
+	n2.setAttribute('x2','0');
+	n2.setAttribute('y2','7');
+	n2.setAttribute('stroke','black');
+	n2.setAttribute('stroke-width','4');
+	n0.appendChild(n2);
 	var n3=document.createElementNS('http://www.w3.org/2000/svg','line');
-	n3.setAttribute('x1','0');
-	n3.setAttribute('y1','-7');
-	n3.setAttribute('x2','0');
-	n3.setAttribute('y2','7');
+	n3.setAttribute('x1','-7');
+	n3.setAttribute('y1','0');
+	n3.setAttribute('x2','7');
+	n3.setAttribute('y2','0');
 	n3.setAttribute('stroke','black');
 	n3.setAttribute('stroke-width','4');
-	n1.appendChild(n3);
-	var n4=document.createElementNS('http://www.w3.org/2000/svg','line');
-	n4.setAttribute('x1','-7');
-	n4.setAttribute('y1','0');
-	n4.setAttribute('x2','7');
-	n4.setAttribute('y2','0');
-	n4.setAttribute('stroke','black');
-	n4.setAttribute('stroke-width','4');
-	n1.appendChild(n4);
-	n0.appendChild(n1);
-	var n5=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n5.setAttribute('x','0');
-	n5.setAttribute('y','0');
-	n5.setAttribute('text-anchor','middle');
-	n5.setAttribute('font-size','12');
-	n5.setAttribute('font-family','Monospace');
-	n5.setAttribute('fill','white');
+	n0.appendChild(n3);
+	var n4=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n4.setAttribute('x','0');
+	n4.setAttribute('y','0');
+	n4.setAttribute('text-anchor','middle');
+	n4.setAttribute('font-size','12');
+	n4.setAttribute('font-family','Monospace');
+	n4.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Text',{
-		set:function(v){n5.textContent=v;},
-		get:function(){return n5.textContent;}
+		set:function(v){n4.textContent=v;},
+		get:function(){return n4.textContent;}
 	});
-	n0.appendChild(n5);
+	n0.appendChild(n4);
 	return n0;
 };
 Red=function(){
@@ -184,52 +182,50 @@ Red=function(){
 		get:function(){return mY;}
 	});
 	n0.setAttribute('transform','translate('+mX+' '+mY+')');
-	var n1=document.createElementNS('http://www.w3.org/2000/svg','g');
 	Object.defineProperty(n0, 'Opacity',{
-		set:function(v){n1.setAttribute('opacity',v);},
-		get:function(){return n1.getAttribute('opacity');}
+		set:function(v){n0.setAttribute('opacity',v);},
+		get:function(){return n0.getAttribute('opacity');}
 	});
-	var n2=document.createElementNS('http://www.w3.org/2000/svg','circle');
-	n2.setAttribute('fill','#FF0000');
-	n2.setAttribute('stroke','none');
-	n2.setAttribute('cx','0');
-	n2.setAttribute('cy','0');
-	n2.setAttribute('r','10');
-	n2.setAttribute('opacity','1');
+	var n1=document.createElementNS('http://www.w3.org/2000/svg','circle');
+	n1.setAttribute('fill','#FF0000');
+	n1.setAttribute('stroke','none');
+	n1.setAttribute('cx','0');
+	n1.setAttribute('cy','0');
+	n1.setAttribute('r','10');
+	n1.setAttribute('opacity','1');
 	Object.defineProperty(n0, 'R',{
-		set:function(v){n2.setAttribute('r',v);},
-		get:function(){return n2.getAttribute('r');}
+		set:function(v){n1.setAttribute('r',v);},
+		get:function(){return n1.getAttribute('r');}
 	});
-	n1.appendChild(n2);
+	n0.appendChild(n1);
+	var n2=document.createElementNS('http://www.w3.org/2000/svg','line');
+	n2.setAttribute('x1','-6');
+	n2.setAttribute('y1','-4');
+	n2.setAttribute('x2','6');
+	n2.setAttribute('y2','-4');
+	n2.setAttribute('stroke','black');
+	n2.setAttribute('stroke-width','4');
+	n0.appendChild(n2);
 	var n3=document.createElementNS('http://www.w3.org/2000/svg','line');
 	n3.setAttribute('x1','-6');
-	n3.setAttribute('y1','-4');
+	n3.setAttribute('y1','4');
 	n3.setAttribute('x2','6');
-	n3.setAttribute('y2','-4');
+	n3.setAttribute('y2','4');
 	n3.setAttribute('stroke','black');
 	n3.setAttribute('stroke-width','4');
-	n1.appendChild(n3);
-	var n4=document.createElementNS('http://www.w3.org/2000/svg','line');
-	n4.setAttribute('x1','-6');
-	n4.setAttribute('y1','4');
-	n4.setAttribute('x2','6');
-	n4.setAttribute('y2','4');
-	n4.setAttribute('stroke','black');
-	n4.setAttribute('stroke-width','4');
-	n1.appendChild(n4);
-	n0.appendChild(n1);
-	var n5=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n5.setAttribute('x','0');
-	n5.setAttribute('y','0');
-	n5.setAttribute('text-anchor','middle');
-	n5.setAttribute('font-size','12');
-	n5.setAttribute('font-family','Monospace');
-	n5.setAttribute('fill','white');
+	n0.appendChild(n3);
+	var n4=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n4.setAttribute('x','0');
+	n4.setAttribute('y','0');
+	n4.setAttribute('text-anchor','middle');
+	n4.setAttribute('font-size','12');
+	n4.setAttribute('font-family','Monospace');
+	n4.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Text',{
-		set:function(v){n5.textContent=v;},
-		get:function(){return n5.textContent;}
+		set:function(v){n4.textContent=v;},
+		get:function(){return n4.textContent;}
 	});
-	n0.appendChild(n5);
+	n0.appendChild(n4);
 	return n0;
 };
 Screen=function(){
@@ -475,51 +471,49 @@ Yellow=function(){
 		get:function(){return mY;}
 	});
 	n0.setAttribute('transform','translate('+mX+' '+mY+')');
-	var n1=document.createElementNS('http://www.w3.org/2000/svg','g');
 	Object.defineProperty(n0, 'Opacity',{
-		set:function(v){n1.setAttribute('opacity',v);},
-		get:function(){return n1.getAttribute('opacity');}
+		set:function(v){n0.setAttribute('opacity',v);},
+		get:function(){return n0.getAttribute('opacity');}
 	});
-	var n2=document.createElementNS('http://www.w3.org/2000/svg','circle');
-	n2.setAttribute('fill','#FFFF00');
-	n2.setAttribute('stroke','none');
-	n2.setAttribute('cx','0');
-	n2.setAttribute('cy','0');
-	n2.setAttribute('r','10');
-	n2.setAttribute('opacity','1');
+	var n1=document.createElementNS('http://www.w3.org/2000/svg','circle');
+	n1.setAttribute('fill','#FFFF00');
+	n1.setAttribute('stroke','none');
+	n1.setAttribute('cx','0');
+	n1.setAttribute('cy','0');
+	n1.setAttribute('r','10');
+	n1.setAttribute('opacity','1');
 	Object.defineProperty(n0, 'R',{
-		set:function(v){n2.setAttribute('r',v);},
-		get:function(){return n2.getAttribute('r');}
+		set:function(v){n1.setAttribute('r',v);},
+		get:function(){return n1.getAttribute('r');}
 	});
-	n1.appendChild(n2);
+	n0.appendChild(n1);
+	var n2=document.createElementNS('http://www.w3.org/2000/svg','line');
+	n2.setAttribute('x1','-5');
+	n2.setAttribute('y1','-5');
+	n2.setAttribute('x2','5');
+	n2.setAttribute('y2','5');
+	n2.setAttribute('stroke','black');
+	n2.setAttribute('stroke-width','4');
+	n0.appendChild(n2);
 	var n3=document.createElementNS('http://www.w3.org/2000/svg','line');
-	n3.setAttribute('x1','-5');
+	n3.setAttribute('x1','5');
 	n3.setAttribute('y1','-5');
-	n3.setAttribute('x2','5');
+	n3.setAttribute('x2','-5');
 	n3.setAttribute('y2','5');
 	n3.setAttribute('stroke','black');
 	n3.setAttribute('stroke-width','4');
-	n1.appendChild(n3);
-	var n4=document.createElementNS('http://www.w3.org/2000/svg','line');
-	n4.setAttribute('x1','5');
-	n4.setAttribute('y1','-5');
-	n4.setAttribute('x2','-5');
-	n4.setAttribute('y2','5');
-	n4.setAttribute('stroke','black');
-	n4.setAttribute('stroke-width','4');
-	n1.appendChild(n4);
-	n0.appendChild(n1);
-	var n5=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n5.setAttribute('x','0');
-	n5.setAttribute('y','0');
-	n5.setAttribute('text-anchor','middle');
-	n5.setAttribute('font-size','12');
-	n5.setAttribute('font-family','Monospace');
-	n5.setAttribute('fill','white');
+	n0.appendChild(n3);
+	var n4=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n4.setAttribute('x','0');
+	n4.setAttribute('y','0');
+	n4.setAttribute('text-anchor','middle');
+	n4.setAttribute('font-size','12');
+	n4.setAttribute('font-family','Monospace');
+	n4.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Text',{
-		set:function(v){n5.textContent=v;},
-		get:function(){return n5.textContent;}
+		set:function(v){n4.textContent=v;},
+		get:function(){return n4.textContent;}
 	});
-	n0.appendChild(n5);
+	n0.appendChild(n4);
 	return n0;
 };
