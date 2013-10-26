@@ -1,7 +1,7 @@
 {
 	"name": "Paraboloid",
 	"developer": {
-		"name": "thibata",
+		"name": "tshibata",
 		"url": "http://tshibata.github.io/"
 	},
 	"package_path": "http://tshibata.github.io/stasc/paraboloid/package.zip",
