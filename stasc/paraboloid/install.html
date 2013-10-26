@@ -1,0 +1,17 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+var manifest = "http://tshibata.github.io/stasc/paraboloid/package.manifest";
+var installation = navigator.mozApps.installPackage(manifest);
+installation.onsuccess = function() {
+	document.body.appendChild(document.createTextNode("Installed"));
+};
+installation.onerror = function() {
+	document.body.appendChild(document.createTextNode(this.error.name));
+};
+		</script>
+	</body>
+</html>
+
