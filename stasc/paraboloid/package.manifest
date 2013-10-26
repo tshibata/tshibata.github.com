@@ -1,6 +1,10 @@
 {
-  "name": "Paraboloid",
-  "package_path": "http://tshibata.github.io/stasc/paraboloid/package.zip",
-  "version": "1.0"
+	"name": "Paraboloid",
+	"developer": {
+		"name": "thibata",
+		"url": "http://tshibata.github.io/"
+	},
+	"package_path": "http://tshibata.github.io/stasc/paraboloid/package.zip",
+	"version": "1.0"
 }
 
