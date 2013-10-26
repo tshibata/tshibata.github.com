@@ -1,0 +1,20 @@
+{
+	"name": "Paraboloid",
+	"description": "Break out at full blast!",
+	"version": "1.0",
+	"launch_path": "/paraboloid/index.html",
+	"icons": {
+		"32": "/paraboloid/icon32.png",
+		"60": "/paraboloid/icon60.png",
+		"90": "/paraboloid/icon90.png",
+		"120": "/paraboloid/icon120.png",
+		"128": "/paraboloid/icon128.png",
+		"256": "/paraboloid/icon256.png"
+	},
+	"developer": {
+		"name": "thibata",
+		"url": "http://tshibata.github.io/"
+	},
+	"default_locale": "en"
+}
+
