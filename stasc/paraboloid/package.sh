@@ -11,5 +11,6 @@ convert -resize 256x256 icon.svg package/icon256.png
 cp manifest.webapp ../Sxout.js package
 mkdir package/paraboloid
 cp *.html *.js package/paraboloid
-zip -r package.zip package
+cd package
+zip -r ../package.zip .
 
