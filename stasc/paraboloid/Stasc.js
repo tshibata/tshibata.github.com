@@ -22,7 +22,7 @@ End=function(){
 	var n0=document.createElementNS('http://www.w3.org/2000/svg','g');
 	var n1=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n1.setAttribute('x','160');
-	n1.setAttribute('y','240');
+	n1.setAttribute('y','220');
 	n1.setAttribute('text-anchor','middle');
 	n1.setAttribute('font-size','28');
 	n1.setAttribute('font-family','Helvetica');
@@ -31,7 +31,7 @@ End=function(){
 	n0.appendChild(n1);
 	var n2=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n2.setAttribute('x','160');
-	n2.setAttribute('y','260');
+	n2.setAttribute('y','250');
 	n2.setAttribute('text-anchor','end');
 	n2.setAttribute('font-size','14');
 	n2.setAttribute('font-family','Helvetica');
@@ -40,7 +40,7 @@ End=function(){
 	n0.appendChild(n2);
 	var n3=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n3.setAttribute('x','160');
-	n3.setAttribute('y','260');
+	n3.setAttribute('y','250');
 	n3.setAttribute('text-anchor','start');
 	n3.setAttribute('font-size','14');
 	n3.setAttribute('font-family','Helvetica');
@@ -52,7 +52,7 @@ End=function(){
 	n0.appendChild(n3);
 	var n4=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n4.setAttribute('x','160');
-	n4.setAttribute('y','280');
+	n4.setAttribute('y','270');
 	n4.setAttribute('text-anchor','end');
 	n4.setAttribute('font-size','14');
 	n4.setAttribute('font-family','Helvetica');
@@ -61,7 +61,7 @@ End=function(){
 	n0.appendChild(n4);
 	var n5=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n5.setAttribute('x','160');
-	n5.setAttribute('y','280');
+	n5.setAttribute('y','270');
 	n5.setAttribute('text-anchor','start');
 	n5.setAttribute('font-size','14');
 	n5.setAttribute('font-family','Helvetica');
@@ -73,9 +73,9 @@ End=function(){
 	n0.appendChild(n5);
 	var n6=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n6.setAttribute('x','160');
-	n6.setAttribute('y','300');
+	n6.setAttribute('y','320');
 	n6.setAttribute('text-anchor','middle');
-	n6.setAttribute('font-size','14');
+	n6.setAttribute('font-size','20');
 	n6.setAttribute('font-family','Helvetica');
 	n6.setAttribute('fill','White');
 	n6.setAttribute('text-decoration','underline');
@@ -87,9 +87,9 @@ End=function(){
 	n7.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
 	var n8=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n8.setAttribute('x','160');
-	n8.setAttribute('y','320');
+	n8.setAttribute('y','350');
 	n8.setAttribute('text-anchor','middle');
-	n8.setAttribute('font-size','14');
+	n8.setAttribute('font-size','20');
 	n8.setAttribute('font-family','Helvetica');
 	n8.setAttribute('fill','white');
 	n8.setAttribute('text-decoration','underline');
@@ -323,7 +323,7 @@ Screen=function(){
 	var n9=document.createElementNS('http://www.w3.org/2000/svg','g');
 	var n10=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n10.setAttribute('x','160');
-	n10.setAttribute('y','260');
+	n10.setAttribute('y','250');
 	n10.setAttribute('text-anchor','end');
 	n10.setAttribute('font-size','14');
 	n10.setAttribute('font-family','Helvetica');
@@ -332,7 +332,7 @@ Screen=function(){
 	n9.appendChild(n10);
 	var n11=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n11.setAttribute('x','160');
-	n11.setAttribute('y','260');
+	n11.setAttribute('y','250');
 	n11.setAttribute('text-anchor','start');
 	n11.setAttribute('font-size','14');
 	n11.setAttribute('font-family','Helvetica');
@@ -344,7 +344,7 @@ Screen=function(){
 	n9.appendChild(n11);
 	var n12=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n12.setAttribute('x','160');
-	n12.setAttribute('y','280');
+	n12.setAttribute('y','270');
 	n12.setAttribute('text-anchor','end');
 	n12.setAttribute('font-size','14');
 	n12.setAttribute('font-family','Helvetica');
@@ -353,7 +353,7 @@ Screen=function(){
 	n9.appendChild(n12);
 	var n13=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n13.setAttribute('x','160');
-	n13.setAttribute('y','280');
+	n13.setAttribute('y','270');
 	n13.setAttribute('text-anchor','start');
 	n13.setAttribute('font-size','14');
 	n13.setAttribute('font-family','Helvetica');
@@ -365,9 +365,9 @@ Screen=function(){
 	n9.appendChild(n13);
 	var n14=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n14.setAttribute('x','160');
-	n14.setAttribute('y','300');
+	n14.setAttribute('y','320');
 	n14.setAttribute('text-anchor','middle');
-	n14.setAttribute('font-size','14');
+	n14.setAttribute('font-size','20');
 	n14.setAttribute('font-family','Helvetica');
 	n14.setAttribute('fill','white');
 	n14.setAttribute('text-decoration','underline');
@@ -379,9 +379,9 @@ Screen=function(){
 	n15.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
 	var n16=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n16.setAttribute('x','160');
-	n16.setAttribute('y','320');
+	n16.setAttribute('y','350');
 	n16.setAttribute('text-anchor','middle');
-	n16.setAttribute('font-size','14');
+	n16.setAttribute('font-size','20');
 	n16.setAttribute('font-family','Helvetica');
 	n16.setAttribute('fill','white');
 	n16.setAttribute('text-decoration','underline');
