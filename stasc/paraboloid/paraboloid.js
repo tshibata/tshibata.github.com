@@ -79,6 +79,7 @@ window.onload = function() {
 	}
 	blocks = [];
 	svg = Screen();
+	svg.Title.Start.addEventListener("click", start);
 	svg.Title.AlltimeBest = alltimeBest;
 	svg.Title.TodaysBest = todaysBest;
 	document.body.appendChild(svg);
@@ -277,6 +278,7 @@ function play(puckX, puckY, dx, dy) {
 			}
 			clearInterval(iteration);
 			svg.Title = End();
+			svg.Title.Start.addEventListener("click", start);
 			svg.Title.AlltimeBest = alltimeBest;
 			svg.Title.TodaysBest = todaysBest;
 			svg.PuckVisibility = "hidden";

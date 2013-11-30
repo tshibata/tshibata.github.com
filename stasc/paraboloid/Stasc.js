@@ -80,7 +80,9 @@ End=function(){
 	n6.setAttribute('fill','White');
 	n6.setAttribute('text-decoration','underline');
 	n6.setAttribute('style','cursor:pointer;');
-	n6.setAttribute('onclick','start();');
+	Object.defineProperty(n0,'Start',{
+		get:function(){return n6;}
+	});
 	n6.appendChild(document.createTextNode('Replay'));
 	n0.appendChild(n6);
 	var n7=document.createElementNS('http://www.w3.org/2000/svg','a');
@@ -372,7 +374,9 @@ Screen=function(){
 	n14.setAttribute('fill','white');
 	n14.setAttribute('text-decoration','underline');
 	n14.setAttribute('style','cursor:pointer;');
-	n14.setAttribute('onclick','start();');
+	Object.defineProperty(n9,'Start',{
+		get:function(){return n14;}
+	});
 	n14.appendChild(document.createTextNode('Start'));
 	n9.appendChild(n14);
 	var n15=document.createElementNS('http://www.w3.org/2000/svg','a');
