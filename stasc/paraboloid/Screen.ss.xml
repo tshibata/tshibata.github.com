@@ -36,22 +36,22 @@
 		<g>
 			<rect x="0" y="0" fill="white" width="320" height="460"/>
 			<g>
-				<animate attributeType="XML" attributeName="opacity" begin="0s" dur="3s" repeatCount="1" from="0" to="1"/>
-				<text x="160" y="200" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:white; stroke:black; stroke-width:0;">
-					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="3.5s" repeatCount="1" from="24" to="0"/>
+				<animate attributeType="XML" attributeName="opacity" begin="0s" dur="3s" from="0" to="1"/>
+				<text x="160" y="200" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:none; stroke:black; stroke-width:1px;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="3s" from="16px" to="0px"/>
 					Paraboloid
 				</text>
-				<text x="160" y="240" text-anchor="middle" font-family="Helvetica" font-size="24" style="fill:white; stroke:black; stroke-width:0;">
-					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4s" repeatCount="1" from="12" to="0"/>
+				<text x="160" y="240" text-anchor="middle" font-family="Helvetica" font-size="24" style="fill:none; stroke:black; stroke-width:1px;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="3.5s" from="8px" to="0px"/>
 					made by using
 				</text>
-				<text x="160" y="280" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:white; stroke:black; stroke-width:0;">
-					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4.5s" repeatCount="1" from="24" to="0"/>
-					stasc
-				</text>
-				<text x="160" y="300" text-anchor="middle" font-family="Helvetica" font-size="18" style="fill:white; stroke:black; stroke-width:0;">
-					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="5s" repeatCount="1" from="9" to="0"/>
+				<text x="160" y="300" text-anchor="middle" font-family="Helvetica" font-size="18" style="fill:none; stroke:black; stroke-width:1px;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4.5s" from="6px" to="0px"/>
 					(https://github.com/tshibata/stasc)
+				</text>
+				<text x="160" y="280" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:none; stroke:crimson; stroke-width:1px;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4s" from="16px" to="0px"/>
+					stasc
 				</text>
 			</g>
 		</g>
