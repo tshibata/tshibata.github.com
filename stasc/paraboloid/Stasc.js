@@ -323,104 +323,125 @@ Screen=function(){
 	});
 	n0.appendChild(n8);
 	var n9=document.createElementNS('http://www.w3.org/2000/svg','g');
-	var n10=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n10.setAttribute('x','160');
-	n10.setAttribute('y','250');
-	n10.setAttribute('text-anchor','end');
-	n10.setAttribute('font-size','14');
-	n10.setAttribute('font-family','Helvetica');
+	var n10=document.createElementNS('http://www.w3.org/2000/svg','rect');
+	n10.setAttribute('x','0');
+	n10.setAttribute('y','0');
 	n10.setAttribute('fill','white');
-	n10.appendChild(document.createTextNode('All Time Best:'));
+	n10.setAttribute('width','320');
+	n10.setAttribute('height','460');
 	n9.appendChild(n10);
-	var n11=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n11.setAttribute('x','160');
-	n11.setAttribute('y','250');
-	n11.setAttribute('text-anchor','start');
-	n11.setAttribute('font-size','14');
-	n11.setAttribute('font-family','Helvetica');
-	n11.setAttribute('fill','white');
-	Object.defineProperty(n9, 'AlltimeBest',{
-		set:function(v){n11.textContent=v;},
-		get:function(){return n11.textContent;}
-	});
-	n9.appendChild(n11);
-	var n12=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n12.setAttribute('x','160');
-	n12.setAttribute('y','270');
-	n12.setAttribute('text-anchor','end');
-	n12.setAttribute('font-size','14');
-	n12.setAttribute('font-family','Helvetica');
-	n12.setAttribute('fill','white');
-	n12.appendChild(document.createTextNode('Today\'s Best:'));
-	n9.appendChild(n12);
+	var n11=document.createElementNS('http://www.w3.org/2000/svg','g');
+	var n12=document.createElementNS('http://www.w3.org/2000/svg','animate');
+	n12.setAttribute('attributeType','XML');
+	n12.setAttribute('attributeName','opacity');
+	n12.setAttribute('begin','0s');
+	n12.setAttribute('dur','3s');
+	n12.setAttribute('repeatCount','1');
+	n12.setAttribute('from','0');
+	n12.setAttribute('to','1');
+	n11.appendChild(n12);
 	var n13=document.createElementNS('http://www.w3.org/2000/svg','text');
 	n13.setAttribute('x','160');
-	n13.setAttribute('y','270');
-	n13.setAttribute('text-anchor','start');
-	n13.setAttribute('font-size','14');
+	n13.setAttribute('y','200');
+	n13.setAttribute('text-anchor','middle');
 	n13.setAttribute('font-family','Helvetica');
-	n13.setAttribute('fill','white');
-	Object.defineProperty(n9, 'TodaysBest',{
-		set:function(v){n13.textContent=v;},
-		get:function(){return n13.textContent;}
-	});
-	n9.appendChild(n13);
-	var n14=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n14.setAttribute('x','160');
-	n14.setAttribute('y','320');
-	n14.setAttribute('text-anchor','middle');
-	n14.setAttribute('font-size','20');
-	n14.setAttribute('font-family','Helvetica');
-	n14.setAttribute('fill','white');
-	n14.setAttribute('text-decoration','underline');
-	n14.setAttribute('style','cursor:pointer;');
-	Object.defineProperty(n9,'Start',{
-		get:function(){return n14;}
-	});
-	n14.appendChild(document.createTextNode('Start'));
-	n9.appendChild(n14);
-	var n15=document.createElementNS('http://www.w3.org/2000/svg','a');
-	n15.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
-	var n16=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n16.setAttribute('x','160');
-	n16.setAttribute('y','350');
-	n16.setAttribute('text-anchor','middle');
-	n16.setAttribute('font-size','20');
-	n16.setAttribute('font-family','Helvetica');
-	n16.setAttribute('fill','white');
-	n16.setAttribute('text-decoration','underline');
-	n16.appendChild(document.createTextNode('Help'));
+	n13.setAttribute('font-size','48');
+	n13.setAttribute('style','fill:white; stroke:black; stroke-width:0;');
+	var n14=document.createElementNS('http://www.w3.org/2000/svg','animate');
+	n14.setAttribute('attributeType','CSS');
+	n14.setAttribute('attributeName','stroke-width');
+	n14.setAttribute('begin','0s');
+	n14.setAttribute('dur','3.5s');
+	n14.setAttribute('repeatCount','1');
+	n14.setAttribute('from','24');
+	n14.setAttribute('to','0');
+	n13.appendChild(n14);
+	n13.appendChild(document.createTextNode('Paraboloid'));
+	n11.appendChild(n13);
+	var n15=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n15.setAttribute('x','160');
+	n15.setAttribute('y','240');
+	n15.setAttribute('text-anchor','middle');
+	n15.setAttribute('font-family','Helvetica');
+	n15.setAttribute('font-size','24');
+	n15.setAttribute('style','fill:white; stroke:black; stroke-width:0;');
+	var n16=document.createElementNS('http://www.w3.org/2000/svg','animate');
+	n16.setAttribute('attributeType','CSS');
+	n16.setAttribute('attributeName','stroke-width');
+	n16.setAttribute('begin','0s');
+	n16.setAttribute('dur','4s');
+	n16.setAttribute('repeatCount','1');
+	n16.setAttribute('from','12');
+	n16.setAttribute('to','0');
 	n15.appendChild(n16);
-	n9.appendChild(n15);
+	n15.appendChild(document.createTextNode('made by using'));
+	n11.appendChild(n15);
+	var n17=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n17.setAttribute('x','160');
+	n17.setAttribute('y','280');
+	n17.setAttribute('text-anchor','middle');
+	n17.setAttribute('font-family','Helvetica');
+	n17.setAttribute('font-size','48');
+	n17.setAttribute('style','fill:white; stroke:black; stroke-width:0;');
+	var n18=document.createElementNS('http://www.w3.org/2000/svg','animate');
+	n18.setAttribute('attributeType','CSS');
+	n18.setAttribute('attributeName','stroke-width');
+	n18.setAttribute('begin','0s');
+	n18.setAttribute('dur','4.5s');
+	n18.setAttribute('repeatCount','1');
+	n18.setAttribute('from','24');
+	n18.setAttribute('to','0');
+	n17.appendChild(n18);
+	n17.appendChild(document.createTextNode('stasc'));
+	n11.appendChild(n17);
+	var n19=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n19.setAttribute('x','160');
+	n19.setAttribute('y','300');
+	n19.setAttribute('text-anchor','middle');
+	n19.setAttribute('font-family','Helvetica');
+	n19.setAttribute('font-size','18');
+	n19.setAttribute('style','fill:white; stroke:black; stroke-width:0;');
+	var n20=document.createElementNS('http://www.w3.org/2000/svg','animate');
+	n20.setAttribute('attributeType','CSS');
+	n20.setAttribute('attributeName','stroke-width');
+	n20.setAttribute('begin','0s');
+	n20.setAttribute('dur','5s');
+	n20.setAttribute('repeatCount','1');
+	n20.setAttribute('from','9');
+	n20.setAttribute('to','0');
+	n19.appendChild(n20);
+	n19.appendChild(document.createTextNode('(https://github.com/tshibata/stasc)'));
+	n11.appendChild(n19);
+	n9.appendChild(n11);
 	Object.defineProperty(n0,'Title',{
 		set:function(v){n0.replaceChild(v,n9);n9=v;},
 		get:function(){return n9;}
 	});
 	n0.appendChild(n9);
-	var n17=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n17.setAttribute('x','320');
-	n17.setAttribute('y','20');
-	n17.setAttribute('text-anchor','end');
-	n17.setAttribute('font-size','18');
-	n17.setAttribute('font-family','Monospace');
-	n17.setAttribute('fill','white');
+	var n21=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n21.setAttribute('x','320');
+	n21.setAttribute('y','20');
+	n21.setAttribute('text-anchor','end');
+	n21.setAttribute('font-size','18');
+	n21.setAttribute('font-family','Monospace');
+	n21.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Score',{
-		set:function(v){n17.textContent=v;},
-		get:function(){return n17.textContent;}
+		set:function(v){n21.textContent=v;},
+		get:function(){return n21.textContent;}
 	});
-	n0.appendChild(n17);
-	var n18=document.createElementNS('http://www.w3.org/2000/svg','text');
-	n18.setAttribute('x','0');
-	n18.setAttribute('y','20');
-	n18.setAttribute('text-anchor','start');
-	n18.setAttribute('font-size','18');
-	n18.setAttribute('font-family','Monospace');
-	n18.setAttribute('fill','white');
+	n0.appendChild(n21);
+	var n22=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n22.setAttribute('x','0');
+	n22.setAttribute('y','20');
+	n22.setAttribute('text-anchor','start');
+	n22.setAttribute('font-size','18');
+	n22.setAttribute('font-family','Monospace');
+	n22.setAttribute('fill','white');
 	Object.defineProperty(n0, 'Time',{
-		set:function(v){n18.textContent=v;},
-		get:function(){return n18.textContent;}
+		set:function(v){n22.textContent=v;},
+		get:function(){return n22.textContent;}
 	});
-	n0.appendChild(n18);
+	n0.appendChild(n22);
 	return n0;
 };
 Stage=function(){
@@ -454,6 +475,79 @@ Stage=function(){
 		get:function(){return n3;}
 	});
 	n0.appendChild(n3);
+	return n0;
+};
+Start=function(){
+	var n0=document.createElementNS('http://www.w3.org/2000/svg','g');
+	var n1=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n1.setAttribute('x','160');
+	n1.setAttribute('y','250');
+	n1.setAttribute('text-anchor','end');
+	n1.setAttribute('font-size','14');
+	n1.setAttribute('font-family','Helvetica');
+	n1.setAttribute('fill','white');
+	n1.appendChild(document.createTextNode('All Time Best:'));
+	n0.appendChild(n1);
+	var n2=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n2.setAttribute('x','160');
+	n2.setAttribute('y','250');
+	n2.setAttribute('text-anchor','start');
+	n2.setAttribute('font-size','14');
+	n2.setAttribute('font-family','Helvetica');
+	n2.setAttribute('fill','white');
+	Object.defineProperty(n0, 'AlltimeBest',{
+		set:function(v){n2.textContent=v;},
+		get:function(){return n2.textContent;}
+	});
+	n0.appendChild(n2);
+	var n3=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n3.setAttribute('x','160');
+	n3.setAttribute('y','270');
+	n3.setAttribute('text-anchor','end');
+	n3.setAttribute('font-size','14');
+	n3.setAttribute('font-family','Helvetica');
+	n3.setAttribute('fill','white');
+	n3.appendChild(document.createTextNode('Today\'s Best:'));
+	n0.appendChild(n3);
+	var n4=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n4.setAttribute('x','160');
+	n4.setAttribute('y','270');
+	n4.setAttribute('text-anchor','start');
+	n4.setAttribute('font-size','14');
+	n4.setAttribute('font-family','Helvetica');
+	n4.setAttribute('fill','white');
+	Object.defineProperty(n0, 'TodaysBest',{
+		set:function(v){n4.textContent=v;},
+		get:function(){return n4.textContent;}
+	});
+	n0.appendChild(n4);
+	var n5=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n5.setAttribute('x','160');
+	n5.setAttribute('y','320');
+	n5.setAttribute('text-anchor','middle');
+	n5.setAttribute('font-size','20');
+	n5.setAttribute('font-family','Helvetica');
+	n5.setAttribute('fill','white');
+	n5.setAttribute('text-decoration','underline');
+	n5.setAttribute('style','cursor:pointer;');
+	Object.defineProperty(n0,'Start',{
+		get:function(){return n5;}
+	});
+	n5.appendChild(document.createTextNode('Start'));
+	n0.appendChild(n5);
+	var n6=document.createElementNS('http://www.w3.org/2000/svg','a');
+	n6.setAttributeNS('http://www.w3.org/1999/xlink','href','help.html');
+	var n7=document.createElementNS('http://www.w3.org/2000/svg','text');
+	n7.setAttribute('x','160');
+	n7.setAttribute('y','350');
+	n7.setAttribute('text-anchor','middle');
+	n7.setAttribute('font-size','20');
+	n7.setAttribute('font-family','Helvetica');
+	n7.setAttribute('fill','white');
+	n7.setAttribute('text-decoration','underline');
+	n7.appendChild(document.createTextNode('Help'));
+	n6.appendChild(n7);
+	n0.appendChild(n6);
 	return n0;
 };
 Yellow=function(){

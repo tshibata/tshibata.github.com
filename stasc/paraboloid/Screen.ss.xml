@@ -34,27 +34,26 @@
 
 	<ss:plug name="Title">
 		<g>
-			<text x="160" y="250" text-anchor="end" font-size="14" font-family="Helvetica" fill="white">
-			All Time Best:
-			</text>
-			<text x="160" y="250" text-anchor="start" font-size="14" font-family="Helvetica" fill="white">
-				<ss:property name="AlltimeBest" target="textContent"/>
-			</text>
-			<text x="160" y="270" text-anchor="end" font-size="14" font-family="Helvetica" fill="white">
-				Today's Best:
-			</text>
-			<text x="160" y="270" text-anchor="start" font-size="14" font-family="Helvetica" fill="white">
-				<ss:property name="TodaysBest" target="textContent"/>
-			</text>
-			<text x="160" y="320" text-anchor="middle" font-size="20" font-family="Helvetica" fill="white" text-decoration="underline" style="cursor:pointer;">
-				<ss:bond name="Start"/>
-				Start
-			</text>
-			<a xlink:href="help.html">
-				<text x="160" y="350" text-anchor="middle" font-size="20" font-family="Helvetica" fill="white" text-decoration="underline">
-					Help
+			<rect x="0" y="0" fill="white" width="320" height="460"/>
+			<g>
+				<animate attributeType="XML" attributeName="opacity" begin="0s" dur="3s" repeatCount="1" from="0" to="1"/>
+				<text x="160" y="200" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:white; stroke:black; stroke-width:0;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="3.5s" repeatCount="1" from="24" to="0"/>
+					Paraboloid
 				</text>
-			</a>
+				<text x="160" y="240" text-anchor="middle" font-family="Helvetica" font-size="24" style="fill:white; stroke:black; stroke-width:0;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4s" repeatCount="1" from="12" to="0"/>
+					made by using
+				</text>
+				<text x="160" y="280" text-anchor="middle" font-family="Helvetica" font-size="48" style="fill:white; stroke:black; stroke-width:0;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="4.5s" repeatCount="1" from="24" to="0"/>
+					stasc
+				</text>
+				<text x="160" y="300" text-anchor="middle" font-family="Helvetica" font-size="18" style="fill:white; stroke:black; stroke-width:0;">
+					<animate attributeType="CSS" attributeName="stroke-width" begin="0s" dur="5s" repeatCount="1" from="9" to="0"/>
+					(https://github.com/tshibata/stasc)
+				</text>
+			</g>
 		</g>
 	</ss:plug>
 

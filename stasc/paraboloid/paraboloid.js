@@ -79,9 +79,6 @@ window.onload = function() {
 	}
 	blocks = [];
 	svg = Screen();
-	svg.Title.Start.addEventListener("click", start);
-	svg.Title.AlltimeBest = alltimeBest;
-	svg.Title.TodaysBest = todaysBest;
 	document.body.appendChild(svg);
 	adjust();
 	mouseX = WIDTH / 2;
@@ -97,7 +94,13 @@ window.onload = function() {
 		e.preventDefault();
 	});
 	stage = 0;
-	initStage();
+	setTimeout(function() {
+		svg.Title = Start();
+		svg.Title.Start.addEventListener("click", start);
+		svg.Title.AlltimeBest = alltimeBest;
+		svg.Title.TodaysBest = todaysBest;
+		initStage();
+	}, 5000);
 };
 function start() {
 	svg.Title = Clear();
