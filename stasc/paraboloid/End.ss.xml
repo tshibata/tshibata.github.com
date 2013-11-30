@@ -17,7 +17,7 @@
 	<text x="160" y="270" text-anchor="start" font-size="14" font-family="Helvetica" fill="white">
 		<ss:property name="TodaysBest" target="textContent"/>
 	</text>
-	<text x="160" y="320" text-anchor="middle" font-size="20" font-family="Helvetica" fill="White" text-decoration="underline" style="cursor:pointer;">
+	<text x="160" y="320" text-anchor="middle" font-size="20" font-family="Helvetica" fill="white" text-decoration="underline" style="cursor:pointer;">
 		<ss:bond name="Start"/>
 		Replay
 	</text>

@@ -77,7 +77,7 @@ End=function(){
 	n6.setAttribute('text-anchor','middle');
 	n6.setAttribute('font-size','20');
 	n6.setAttribute('font-family','Helvetica');
-	n6.setAttribute('fill','White');
+	n6.setAttribute('fill','white');
 	n6.setAttribute('text-decoration','underline');
 	n6.setAttribute('style','cursor:pointer;');
 	Object.defineProperty(n0,'Start',{
