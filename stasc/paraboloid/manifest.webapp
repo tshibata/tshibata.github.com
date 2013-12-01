@@ -1,7 +1,7 @@
 {
 	"name": "Paraboloid",
 	"description": "Break out at full blast!",
-	"version": "1.01",
+	"version": "1.02",
 	"launch_path": "/paraboloid/index.html",
 	"icons": {
 		"32": "/icon32.png",
