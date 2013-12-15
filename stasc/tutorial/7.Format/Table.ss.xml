@@ -1,0 +1,37 @@
+<svg width="320" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:ss="http://tshibata.github.io/2013/stasc">
+	<rect x="0" y="0" fill="black" width="320" height="480"/>
+	<rect x="5" y="5" fill="royalblue" width="310" height="470"/>
+	<rect x="100" y="0" fill="royalblue" width="120" height="480"/>
+
+	<g>
+		<ss:attribute target="transform">
+			<ss:format>translate(<ss:item name="FoeX">160</ss:item> 80)</ss:format>
+		</ss:attribute>
+		<circle fill="lightgrey" stroke="black" cx="0" cy="0" r="25"/>
+		<circle fill="lightgrey" stroke="black" cx="0" cy="0" r="12"/>
+	</g>
+
+	<circle visibility="hidden" fill="yellow" stroke="black" cx="160" cy="240" r="20">
+		<ss:attribute name="PuckVisibility" target="visibility"/>
+		<ss:attribute name="PuckX" target="cx"/>
+		<ss:attribute name="PuckY" target="cy"/>
+	</circle>
+
+	<g>
+		<ss:attribute target="transform">
+			<ss:format>translate(<ss:item name="YouX">160</ss:item> 400)</ss:format>
+		</ss:attribute>
+		<circle fill="lightgrey" stroke="black" cx="0" cy="0" r="25"/>
+		<circle fill="lightgrey" stroke="black" cx="0" cy="0" r="12"/>
+	</g>
+
+	<ss:plug name="Overlay"><g>
+		<text x="160" y="240" text-anchor="middle" font-size="28" fill="white">
+			SVGAirHockey
+		</text>
+		<text x="160" y="260" text-anchor="middle" font-size="14" fill="white" text-decoration="underline" style="cursor:pointer;" onclick="start();">
+			Start
+		</text>
+	</g></ss:plug>
+</svg>
+

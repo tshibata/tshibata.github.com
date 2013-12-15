@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>7. Format</title>
+<script content="text/javascript" src="Stasc.js"></script>
+<script content="text/javascript" src="airhockey.js"></script>
+</head>
+<body>
+<div id="game" style="float: left;">
+</div>
+<div>
+<h1>7. Format</h1>
+So far, the mallets were just simple circles.
+They must have handles.
+To move a mallet and its handle as a group, you define translate in transform attribute of group tag.
+It is not a pair of attributes like cx and cy of circle element.
+But you can still handle it as a pair of values by using stasc format tag.
+In <a href="Table.ss.xml">Table.ss.xml</a>, for example, transform attribute of your mallet is controlled as follows:
+<div style="display:table; padding:1em; font-family:monospace;display:table; font-family:monospace;"><pre>
+&lt;ss:attribute target="transform"&gt;
+  &lt;ss:format&gt;translate(&lt;ss:item name="YouX"&gt;160&lt;/ss:item&gt; 400)&lt;/ss:format&gt;
+&lt;/ss:attribute&gt;
+</pre></div>
+Initial value of the transform attribute is "translate(160 400)" and the x coordinate is refered as YouX.
+</div>
+<div>
+Contents of <a href="HowToPlay.html" target="_blank">HowToPlay.html</a> and <a href="ViewRecipes.html" target="_blank">ViewRecipes.html</a> are still the same but they look up to date.
+They use Stasc.js so your changes are already reflected.
+</div>
+<div>
+<a href="../6.Document/index.html">&lt;&lt;</a>
+</div>
+</body>
+</html>
+
